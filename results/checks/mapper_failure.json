@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "injected_chunk": 1,
+  "no_retry_exit_code": 1,
+  "partial_results_published": false,
+  "recovery_retries": 1,
+  "exact_match_after_retry": true,
+  "failure_model": "mapper task exception; worker/host termination not simulated"
+}

@@ -1,0 +1,10 @@
+currency,gross,vacancies,with_salary,accepted_net,accepted_gross
+,,4777,0,0,0
+RUR,false,859,859,859,0
+RUR,true,411,411,0,411
+USD,false,35,35,0,0
+USD,true,9,9,0,0
+EUR,true,6,6,0,0
+BYR,true,1,1,0,0
+KZT,false,1,1,0,0
+EUR,false,1,1,0,0

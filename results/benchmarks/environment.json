@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2026-10-21T11:15:44.102418+00:00",
+  "python": "3.11.0 (v3.11.0:deaf509e8f, Oct 24 2022, 14:43:23) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-15.0-arm64-arm-64bit",
+  "attempts": 3,
+  "chunk_size": 250,
+  "workers": 2,
+  "duckdb_threads": 2,
+  "s3_csv": "s3://hh-lake/variant=3/java_vacancies.csv",
+  "s3_parquet": "s3://hh-lake/variant=3/java_vacancies.parquet"
+}

@@ -1,0 +1,11 @@
+direction,k,stack,vacancies,salary_n,median_net_rub,base_stack,base_vacancies,base_salary_n,base_median_net_rub,added_skills,delta_rub,delta_pct,base_without_added_n,base_without_added_median,exclusive_delta_rub
+decrease,3,"['hibernate', 'postgresql', 'spring boot']",85,28,190000.0,"['postgresql', 'spring boot']",513,102,240000.0,['hibernate'],-50000.0,-20.833333333333336,74,250000.0,-60000.0
+decrease,3,"['java', 'postgresql', 'ооп']",263,20,165000.0,"['java', 'postgresql']",1625,283,205000.0,['ооп'],-40000.0,-19.512195121951216,263,210000.0,-45000.0
+decrease,3,"['git', 'java', 'ооп']",188,22,162500.0,"['git', 'java']",959,202,200000.0,['ооп'],-37500.0,-18.75,180,200000.0,-37500.0
+decrease,3,"['java', 'linux', 'postgresql']",117,32,170000.0,"['java', 'postgresql']",1625,283,205000.0,['linux'],-35000.0,-17.07317073170732,251,215000.0,-45000.0
+decrease,3,"['hibernate orm', 'postgresql', 'spring boot']",75,26,205000.0,"['postgresql', 'spring boot']",513,102,240000.0,['hibernate orm'],-35000.0,-14.583333333333337,76,250000.0,-45000.0
+decrease,3,"['java', 'linux', 'spring framework']",117,29,185000.0,"['java', 'spring framework']",1965,293,215000.0,['linux'],-30000.0,-13.953488372093027,264,220000.0,-35000.0
+decrease,3,"['git', 'linux', 'postgresql']",59,27,170000.0,"['git', 'postgresql']",544,133,200000.0,['linux'],-30000.0,-15.000000000000002,106,215000.0,-45000.0
+decrease,3,"['java', 'mysql', 'rabbitmq']",34,25,250000.0,"['java', 'rabbitmq']",391,61,280000.0,['mysql'],-30000.0,-10.71428571428571,36,282500.0,-32500.0
+decrease,3,"['apache maven', 'postgresql', 'spring boot']",53,21,210000.0,"['postgresql', 'spring boot']",513,102,240000.0,['apache maven'],-30000.0,-12.5,81,250000.0,-40000.0
+decrease,3,"['hibernate orm', 'java', 'postgresql']",422,69,180000.0,"['java', 'postgresql']",1625,283,205000.0,['hibernate orm'],-25000.0,-12.195121951219512,214,215000.0,-35000.0

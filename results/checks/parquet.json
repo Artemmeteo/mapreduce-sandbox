@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "left": "results/mapreduce",
+  "right": "results/duckdb_parquet",
+  "checks": [
+    {
+      "k": 1,
+      "left_keys": 1069,
+      "right_keys": 1069,
+      "left_total": 27086,
+      "right_total": 27086,
+      "mismatch_count": 0,
+      "examples": []
+    },
+    {
+      "k": 2,
+      "left_keys": 15755,
+      "right_keys": 15755,
+      "left_total": 104741,
+      "right_total": 104741,
+      "mismatch_count": 0,
+      "examples": []
+    },
+    {
+      "k": 3,
+      "left_keys": 103138,
+      "right_keys": 103138,
+      "left_total": 323377,
+      "right_total": 323377,
+      "mismatch_count": 0,
+      "examples": []
+    }
+  ],
+  "population_matches": true
+}

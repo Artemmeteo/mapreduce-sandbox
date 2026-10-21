@@ -1,0 +1,11 @@
+.venv/
+.duckdb_extensions/
+.env
+__pycache__/
+*.egg-info/
+.idea/
+*.duckdb*
+results/data/*.csv
+results/data/*.parquet
+.DS_Store
+.ruff_cache/

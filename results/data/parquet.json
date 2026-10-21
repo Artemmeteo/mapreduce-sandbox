@@ -1,0 +1,9 @@
+{
+  "s3_uri": "s3://hh-lake/variant=3/java_vacancies.parquet",
+  "rows": 6100,
+  "compression": "zstd",
+  "csv_bytes": 22914382,
+  "parquet_bytes": 3430103,
+  "conversion_seconds": 1.0735071250237525,
+  "exact_match": true
+}

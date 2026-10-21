@@ -1,0 +1,29 @@
+{
+  "engine": "duckdb",
+  "version": "1.4.1",
+  "format": "csv",
+  "s3_uri": "s3://hh-lake/variant=3/java_vacancies.csv",
+  "rows": 6100,
+  "with_skills": 4088,
+  "threads": 2,
+  "controls": [
+    {
+      "k": 1,
+      "unique_combinations": 1069,
+      "total_occurrences": 27086,
+      "expected_sum_binomial": 27086
+    },
+    {
+      "k": 2,
+      "unique_combinations": 15755,
+      "total_occurrences": 104741,
+      "expected_sum_binomial": 104741
+    },
+    {
+      "k": 3,
+      "unique_combinations": 103138,
+      "total_occurrences": 323377,
+      "expected_sum_binomial": 323377
+    }
+  ]
+}

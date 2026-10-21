@@ -1,0 +1,154 @@
+k,stack,experience,vacancies,salary_n,median_net_rub
+2,"['docker', 'rabbitmq']",Более 6 лет,18,4,420000.0
+2,"['docker', 'rabbitmq']",Нет опыта,3,1,47500.0
+2,"['docker', 'rabbitmq']",От 1 года до 3 лет,20,5,110000.0
+2,"['docker', 'rabbitmq']",От 3 до 6 лет,145,33,300000.0
+2,"['docker', 'spring']",Более 6 лет,9,3,420000.0
+2,"['docker', 'spring']",Нет опыта,3,0,
+2,"['docker', 'spring']",От 1 года до 3 лет,26,6,220000.0
+2,"['docker', 'spring']",От 3 до 6 лет,103,16,300000.0
+2,"['git', 'junit']",Более 6 лет,1,0,
+2,"['git', 'junit']",Нет опыта,4,3,47500.0
+2,"['git', 'junit']",От 1 года до 3 лет,27,15,150000.0
+2,"['git', 'junit']",От 3 до 6 лет,49,3,150000.0
+2,"['git', 'kotlin']",Более 6 лет,7,0,
+2,"['git', 'kotlin']",Нет опыта,1,1,70000.0
+2,"['git', 'kotlin']",От 1 года до 3 лет,24,6,162500.0
+2,"['git', 'kotlin']",От 3 до 6 лет,63,25,300000.0
+2,"['git', 'rabbitmq']",Более 6 лет,7,4,230000.0
+2,"['git', 'rabbitmq']",Нет опыта,7,3,100000.0
+2,"['git', 'rabbitmq']",От 1 года до 3 лет,18,2,110000.0
+2,"['git', 'rabbitmq']",От 3 до 6 лет,107,26,300000.0
+2,"['git', 'ооп']",Более 6 лет,3,1,410000.0
+2,"['git', 'ооп']",Нет опыта,71,5,50000.0
+2,"['git', 'ооп']",От 1 года до 3 лет,51,12,135000.0
+2,"['git', 'ооп']",От 3 до 6 лет,75,12,200000.0
+2,"['hibernate', 'junit']",Более 6 лет,2,0,
+2,"['hibernate', 'junit']",Нет опыта,3,2,70000.0
+2,"['hibernate', 'junit']",От 1 года до 3 лет,11,5,150000.0
+2,"['hibernate', 'junit']",От 3 до 6 лет,33,13,180000.0
+2,"['html', 'java']",Более 6 лет,3,2,150000.0
+2,"['html', 'java']",Нет опыта,3,2,55000.0
+2,"['html', 'java']",От 1 года до 3 лет,73,9,150000.0
+2,"['html', 'java']",От 3 до 6 лет,20,7,180000.0
+2,"['java', 'javascript']",Нет опыта,1,1,52500.0
+2,"['java', 'javascript']",От 1 года до 3 лет,97,14,150000.0
+2,"['java', 'javascript']",От 3 до 6 лет,86,19,150000.0
+2,"['java', 'microservices']",Более 6 лет,12,6,345000.0
+2,"['java', 'microservices']",Нет опыта,1,1,60000.0
+2,"['java', 'microservices']",От 1 года до 3 лет,17,6,277500.0
+2,"['java', 'microservices']",От 3 до 6 лет,82,13,300000.0
+2,"['java', 'nosql']",Более 6 лет,6,2,350000.0
+2,"['java', 'nosql']",Нет опыта,3,1,62500.0
+2,"['java', 'nosql']",От 1 года до 3 лет,18,2,225000.0
+2,"['java', 'nosql']",От 3 до 6 лет,42,18,295000.0
+2,"['java', 'rabbitmq']",Более 6 лет,45,9,280000.0
+2,"['java', 'rabbitmq']",Нет опыта,7,3,100000.0
+2,"['java', 'rabbitmq']",От 1 года до 3 лет,39,5,110000.0
+2,"['java', 'rabbitmq']",От 3 до 6 лет,300,44,300000.0
+2,"['java', 'ооп']",Более 6 лет,9,0,
+2,"['java', 'ооп']",Нет опыта,202,6,55000.0
+2,"['java', 'ооп']",От 1 года до 3 лет,139,21,100000.0
+2,"['java', 'ооп']",От 3 до 6 лет,169,19,200000.0
+2,"['junit', 'spring boot']",Более 6 лет,5,0,
+2,"['junit', 'spring boot']",Нет опыта,3,2,70000.0
+2,"['junit', 'spring boot']",От 1 года до 3 лет,17,5,150000.0
+2,"['junit', 'spring boot']",От 3 до 6 лет,41,13,250000.0
+2,"['junit', 'spring framework']",Более 6 лет,7,1,375000.0
+2,"['junit', 'spring framework']",Нет опыта,9,2,70000.0
+2,"['junit', 'spring framework']",От 1 года до 3 лет,30,12,122000.0
+2,"['junit', 'spring framework']",От 3 до 6 лет,80,9,250000.0
+2,"['kotlin', 'postgresql']",Более 6 лет,34,7,400000.0
+2,"['kotlin', 'postgresql']",Нет опыта,1,1,70000.0
+2,"['kotlin', 'postgresql']",От 1 года до 3 лет,22,6,187500.0
+2,"['kotlin', 'postgresql']",От 3 до 6 лет,181,34,290000.0
+2,"['postgresql', 'rabbitmq']",Более 6 лет,34,5,230000.0
+2,"['postgresql', 'rabbitmq']",Нет опыта,4,2,100000.0
+2,"['postgresql', 'rabbitmq']",От 1 года до 3 лет,23,3,90000.0
+2,"['postgresql', 'rabbitmq']",От 3 до 6 лет,224,33,300000.0
+2,"['rabbitmq', 'spring framework']",Более 6 лет,27,8,265000.0
+2,"['rabbitmq', 'spring framework']",Нет опыта,4,2,100000.0
+2,"['rabbitmq', 'spring framework']",От 1 года до 3 лет,18,2,110000.0
+2,"['rabbitmq', 'spring framework']",От 3 до 6 лет,153,20,295000.0
+2,"['spring framework', 'ооп']",Более 6 лет,10,1,410000.0
+2,"['spring framework', 'ооп']",Нет опыта,189,2,65000.0
+2,"['spring framework', 'ооп']",От 1 года до 3 лет,46,9,100000.0
+2,"['spring framework', 'ооп']",От 3 до 6 лет,99,8,200000.0
+2,"['sql', 'ооп']",Более 6 лет,2,1,410000.0
+2,"['sql', 'ооп']",Нет опыта,14,4,55000.0
+2,"['sql', 'ооп']",От 1 года до 3 лет,46,6,150000.0
+2,"['sql', 'ооп']",От 3 до 6 лет,83,12,195000.0
+3,"['apache maven', 'postgresql', 'spring boot']",Более 6 лет,3,0,
+3,"['apache maven', 'postgresql', 'spring boot']",Нет опыта,2,2,70000.0
+3,"['apache maven', 'postgresql', 'spring boot']",От 1 года до 3 лет,6,1,275000.0
+3,"['apache maven', 'postgresql', 'spring boot']",От 3 до 6 лет,42,18,212500.0
+3,"['docker', 'git', 'kotlin']",Более 6 лет,4,0,
+3,"['docker', 'git', 'kotlin']",От 1 года до 3 лет,14,5,150000.0
+3,"['docker', 'git', 'kotlin']",От 3 до 6 лет,34,18,300000.0
+3,"['docker', 'git', 'mysql']",Более 6 лет,1,1,220000.0
+3,"['docker', 'git', 'mysql']",От 1 года до 3 лет,7,1,275000.0
+3,"['docker', 'git', 'mysql']",От 3 до 6 лет,22,19,300000.0
+3,"['docker', 'git', 'rabbitmq']",Более 6 лет,1,1,220000.0
+3,"['docker', 'git', 'rabbitmq']",Нет опыта,3,1,47500.0
+3,"['docker', 'git', 'rabbitmq']",От 1 года до 3 лет,7,1,90000.0
+3,"['docker', 'git', 'rabbitmq']",От 3 до 6 лет,58,23,300000.0
+3,"['git', 'java', 'ооп']",Более 6 лет,2,0,
+3,"['git', 'java', 'ооп']",Нет опыта,69,5,50000.0
+3,"['git', 'java', 'ооп']",От 1 года до 3 лет,43,6,127500.0
+3,"['git', 'java', 'ооп']",От 3 до 6 лет,74,11,200000.0
+3,"['git', 'kotlin', 'postgresql']",Более 6 лет,5,0,
+3,"['git', 'kotlin', 'postgresql']",Нет опыта,1,1,70000.0
+3,"['git', 'kotlin', 'postgresql']",От 1 года до 3 лет,14,4,187500.0
+3,"['git', 'kotlin', 'postgresql']",От 3 до 6 лет,34,19,300000.0
+3,"['git', 'kotlin', 'spring boot']",Более 6 лет,5,0,
+3,"['git', 'kotlin', 'spring boot']",От 1 года до 3 лет,7,2,145000.0
+3,"['git', 'kotlin', 'spring boot']",От 3 до 6 лет,28,18,300000.0
+3,"['git', 'linux', 'postgresql']",Более 6 лет,1,1,200000.0
+3,"['git', 'linux', 'postgresql']",Нет опыта,3,1,60000.0
+3,"['git', 'linux', 'postgresql']",От 1 года до 3 лет,25,12,155000.0
+3,"['git', 'linux', 'postgresql']",От 3 до 6 лет,30,13,200000.0
+3,"['git', 'mysql', 'spring boot']",Более 6 лет,4,3,230000.0
+3,"['git', 'mysql', 'spring boot']",От 1 года до 3 лет,2,0,
+3,"['git', 'mysql', 'spring boot']",От 3 до 6 лет,21,19,300000.0
+3,"['git', 'rabbitmq', 'spring boot']",Более 6 лет,3,3,230000.0
+3,"['git', 'rabbitmq', 'spring boot']",От 1 года до 3 лет,9,0,
+3,"['git', 'rabbitmq', 'spring boot']",От 3 до 6 лет,43,22,300000.0
+3,"['hibernate', 'postgresql', 'spring boot']",Более 6 лет,6,1,200000.0
+3,"['hibernate', 'postgresql', 'spring boot']",Нет опыта,2,2,70000.0
+3,"['hibernate', 'postgresql', 'spring boot']",От 1 года до 3 лет,15,4,167500.0
+3,"['hibernate', 'postgresql', 'spring boot']",От 3 до 6 лет,62,21,200000.0
+3,"['hibernate orm', 'java', 'postgresql']",Более 6 лет,14,3,280000.0
+3,"['hibernate orm', 'java', 'postgresql']",Нет опыта,155,2,65000.0
+3,"['hibernate orm', 'java', 'postgresql']",От 1 года до 3 лет,46,23,120000.0
+3,"['hibernate orm', 'java', 'postgresql']",От 3 до 6 лет,207,41,210000.0
+3,"['hibernate orm', 'postgresql', 'spring boot']",Более 6 лет,7,1,275000.0
+3,"['hibernate orm', 'postgresql', 'spring boot']",Нет опыта,1,1,70000.0
+3,"['hibernate orm', 'postgresql', 'spring boot']",От 1 года до 3 лет,11,5,250000.0
+3,"['hibernate orm', 'postgresql', 'spring boot']",От 3 до 6 лет,56,19,200000.0
+3,"['java', 'kotlin', 'postgresql']",Более 6 лет,32,7,400000.0
+3,"['java', 'kotlin', 'postgresql']",Нет опыта,1,1,70000.0
+3,"['java', 'kotlin', 'postgresql']",От 1 года до 3 лет,20,5,200000.0
+3,"['java', 'kotlin', 'postgresql']",От 3 до 6 лет,178,34,290000.0
+3,"['java', 'linux', 'postgresql']",Более 6 лет,3,3,250000.0
+3,"['java', 'linux', 'postgresql']",Нет опыта,3,1,60000.0
+3,"['java', 'linux', 'postgresql']",От 1 года до 3 лет,35,13,140000.0
+3,"['java', 'linux', 'postgresql']",От 3 до 6 лет,76,15,200000.0
+3,"['java', 'linux', 'spring framework']",Более 6 лет,6,3,350000.0
+3,"['java', 'linux', 'spring framework']",Нет опыта,1,1,50000.0
+3,"['java', 'linux', 'spring framework']",От 1 года до 3 лет,38,9,170000.0
+3,"['java', 'linux', 'spring framework']",От 3 до 6 лет,72,16,225000.0
+3,"['java', 'mysql', 'rabbitmq']",Более 6 лет,6,4,230000.0
+3,"['java', 'mysql', 'rabbitmq']",От 1 года до 3 лет,2,2,110000.0
+3,"['java', 'mysql', 'rabbitmq']",От 3 до 6 лет,26,19,300000.0
+3,"['java', 'postgresql', 'rabbitmq']",Более 6 лет,34,5,230000.0
+3,"['java', 'postgresql', 'rabbitmq']",Нет опыта,4,2,100000.0
+3,"['java', 'postgresql', 'rabbitmq']",От 1 года до 3 лет,23,3,90000.0
+3,"['java', 'postgresql', 'rabbitmq']",От 3 до 6 лет,219,33,300000.0
+3,"['java', 'postgresql', 'ооп']",Более 6 лет,7,0,
+3,"['java', 'postgresql', 'ооп']",Нет опыта,155,1,60000.0
+3,"['java', 'postgresql', 'ооп']",От 1 года до 3 лет,32,8,95000.0
+3,"['java', 'postgresql', 'ооп']",От 3 до 6 лет,69,11,200000.0
+3,"['java', 'spring', 'sql']",Более 6 лет,7,3,420000.0
+3,"['java', 'spring', 'sql']",Нет опыта,3,0,
+3,"['java', 'spring', 'sql']",От 1 года до 3 лет,30,3,145000.0
+3,"['java', 'spring', 'sql']",От 3 до 6 лет,91,17,300000.0

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "java-vacancies-mapreduce"
+version = "1.1.0"
+description = "Java vacancies: RustFS, MapReduce, DuckDB and resource profiling"
+requires-python = ">=3.11"
+dependencies = [
+    "boto3==1.40.60",
+    "duckdb==1.4.1",
+    "psutil==7.1.1",
+]
+
+[project.scripts]
+mapreduce-lab = "map_reduce.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+map_reduce = ["infrastructure/sql/*.sql"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100

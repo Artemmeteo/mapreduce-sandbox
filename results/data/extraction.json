@@ -1,0 +1,90 @@
+{
+  "source_path": "/Users/artemmeteorolog/data_engineering/hw3_MapReduce/it_vacancies_2024.csv",
+  "source_sha256": "303db922b541e4440906f5a7e8be32fb55e8808f950ffddb8c272f1548212a65",
+  "source_bytes": 847619384,
+  "source_rows": 229388,
+  "source_unique_vacancies": 229388,
+  "source_duplicate_rows": 0,
+  "matching_source_rows": 6100,
+  "selected_vacancies": 6100,
+  "selected_sha256": "a900fbbf01d5f64bdf3719261ecbdcccfafcf24002b48e8a29f14e9f709ec04c",
+  "selected_bytes": 22914382,
+  "s3_uri": "s3://hh-lake/variant=3/java_vacancies.csv",
+  "s3_etag": "\"885738a7c415e593d74c1e35bfeb89d7-3\"",
+  "s3_bytes": 22914382,
+  "areas": [
+    [
+      "Москва",
+      3030
+    ],
+    [
+      "Санкт-Петербург",
+      801
+    ],
+    [
+      "Новосибирск",
+      271
+    ],
+    [
+      "Екатеринбург",
+      215
+    ],
+    [
+      "Казань",
+      170
+    ],
+    [
+      "Нижний Новгород",
+      141
+    ],
+    [
+      "Самара",
+      137
+    ],
+    [
+      "Ростов-на-Дону",
+      76
+    ],
+    [
+      "Краснодар",
+      76
+    ],
+    [
+      "Воронеж",
+      71
+    ],
+    [
+      "Томск",
+      66
+    ],
+    [
+      "Пермь",
+      61
+    ],
+    [
+      "Ижевск",
+      49
+    ],
+    [
+      "Рязань",
+      48
+    ],
+    [
+      "Саратов",
+      47
+    ]
+  ],
+  "currency": {
+    "": 4777,
+    "RUR": 1270,
+    "USD": 44,
+    "BYR": 1,
+    "KZT": 1,
+    "EUR": 7
+  },
+  "gross": {
+    "": 4777,
+    "false": 896,
+    "true": 427
+  }
+}

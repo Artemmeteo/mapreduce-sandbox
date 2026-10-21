@@ -1,0 +1,11 @@
+direction,k,stack,vacancies,salary_n,median_net_rub,base_stack,base_vacancies,base_salary_n,base_median_net_rub,added_skills,delta_rub,delta_pct,base_without_added_n,base_without_added_median,exclusive_delta_rub
+increase,2,"['git', 'kotlin']",95,32,300000.0,['git'],1045,230,200000.0,['kotlin'],100000.0,50.0,198,185000.0,115000.0
+increase,2,"['java', 'microservices']",112,26,300000.0,['java'],3736,601,200000.0,['microservices'],100000.0,50.0,575,200000.0,100000.0
+increase,2,"['java', 'nosql']",69,23,295000.0,['java'],3736,601,200000.0,['nosql'],95000.0,47.50000000000001,578,200000.0,95000.0
+increase,2,"['java', 'rabbitmq']",391,61,280000.0,['java'],3736,601,200000.0,['rabbitmq'],80000.0,39.99999999999999,540,200000.0,80000.0
+increase,2,"['postgresql', 'rabbitmq']",285,43,280000.0,['postgresql'],1747,299,200000.0,['rabbitmq'],80000.0,39.99999999999999,256,200000.0,80000.0
+increase,2,"['kotlin', 'postgresql']",238,48,277500.0,['postgresql'],1747,299,200000.0,['kotlin'],77500.0,38.74999999999999,251,200000.0,77500.0
+increase,2,"['docker', 'rabbitmq']",186,43,300000.0,['docker'],712,153,225000.0,['rabbitmq'],75000.0,33.33333333333333,110,217500.0,82500.0
+increase,2,"['git', 'rabbitmq']",139,35,275000.0,['git'],1045,230,200000.0,['rabbitmq'],75000.0,37.5,195,185000.0,90000.0
+increase,2,"['docker', 'spring']",141,25,300000.0,['docker'],712,153,225000.0,['spring'],75000.0,33.33333333333333,128,225000.0,75000.0
+increase,2,"['rabbitmq', 'spring framework']",202,32,285000.0,['spring framework'],2090,320,213750.0,['rabbitmq'],71250.0,33.33333333333333,288,200000.0,85000.0
