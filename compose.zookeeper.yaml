@@ -1,0 +1,53 @@
+name: hw4-zookeeper-lab
+
+x-zookeeper: &zookeeper
+  image: zookeeper:3.9.6-jre-17
+  restart: "no"
+  environment: &environment
+    ZOO_SERVERS: "server.1=zoo1:2888:3888;2181 server.2=zoo2:2888:3888;2181 server.3=zoo3:2888:3888;2181"
+    ZOO_TICK_TIME: 2000
+    ZOO_INIT_LIMIT: 10
+    ZOO_SYNC_LIMIT: 5
+    ZOO_STANDALONE_ENABLED: "false"
+    ZOO_4LW_COMMANDS_WHITELIST: "ruok,srvr,mntr"
+    ZOO_CFG_EXTRA: "minSessionTimeout=10000 maxSessionTimeout=10000"
+  healthcheck:
+    test: ["CMD-SHELL", "zkServer.sh status 2>/dev/null | grep -Eq 'Mode: (leader|follower)'"]
+    interval: 3s
+    timeout: 3s
+    retries: 20
+    start_period: 10s
+
+services:
+  zoo1:
+    <<: *zookeeper
+    hostname: zoo1
+    environment:
+      <<: *environment
+      ZOO_MY_ID: 1
+    ports: ["127.0.0.1:${ZK_PORT_1:-22181}:2181"]
+    volumes: ["zoo1-data:/data", "zoo1-log:/datalog"]
+  zoo2:
+    <<: *zookeeper
+    hostname: zoo2
+    environment:
+      <<: *environment
+      ZOO_MY_ID: 2
+    ports: ["127.0.0.1:${ZK_PORT_2:-22182}:2181"]
+    volumes: ["zoo2-data:/data", "zoo2-log:/datalog"]
+  zoo3:
+    <<: *zookeeper
+    hostname: zoo3
+    environment:
+      <<: *environment
+      ZOO_MY_ID: 3
+    ports: ["127.0.0.1:${ZK_PORT_3:-22183}:2181"]
+    volumes: ["zoo3-data:/data", "zoo3-log:/datalog"]
+
+volumes:
+  zoo1-data:
+  zoo1-log:
+  zoo2-data:
+  zoo2-log:
+  zoo3-data:
+  zoo3-log:

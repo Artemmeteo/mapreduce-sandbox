@@ -111,7 +111,8 @@ def dispatch(args: argparse.Namespace):
             "etag": remote["ETag"],
         }
     if args.command == "publish":
-        return {"bucket": settings.bucket, "uploaded_results": storage.publish(RESULTS)}
+        count = storage.publish(RESULTS, exclude_dirs=("hw4",))
+        return {"bucket": settings.bucket, "uploaded_results": count}
     raise ValueError(f"Unknown command: {args.command}")
 
 

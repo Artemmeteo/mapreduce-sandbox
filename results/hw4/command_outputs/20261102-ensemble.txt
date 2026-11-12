@@ -1,0 +1,57 @@
+quorum_write_available=True
+127.0.0.1:22181 Mode: follower
+127.0.0.1:22182 Mode: follower
+127.0.0.1:22183 Mode: leader
+ Container hw4-zookeeper-lab-zoo3-1  Stopping
+ Container hw4-zookeeper-lab-zoo3-1  Stopped
+Connection dropped: socket connection error: Connection refused
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection error: Connection refused
+quorum_write_available=True
+ Container hw4-zookeeper-lab-zoo2-1  Stopping
+ Container hw4-zookeeper-lab-zoo2-1  Stopped
+Connection dropped: socket connection broken
+Connection dropped: socket connection error: Connection refused
+Connection dropped: socket connection error: Connection refused
+Connection dropped: socket connection error: Connection refused
+Connection dropped: socket connection broken
+Connection dropped: socket connection error: Connection refused
+Connection dropped: socket connection error: Connection refused
+Connection dropped: socket connection error: Connection refused
+Connection dropped: socket connection broken
+Connection dropped: socket connection error: Connection refused
+Connection dropped: socket connection error: Connection refused
+Connection dropped: socket connection broken
+Connection dropped: socket connection error: Connection refused
+Connection dropped: socket connection error: Connection refused
+Connection dropped: socket connection broken
+Connection dropped: socket connection error: Connection refused
+Connection dropped: socket connection error: Connection refused
+Connection dropped: socket connection broken
+Failed connecting to Zookeeper within the connection retry policy.
+quorum_write_available=False
+ Container hw4-zookeeper-lab-zoo3-1  Starting
+ Container hw4-zookeeper-lab-zoo2-1  Starting
+ Container hw4-zookeeper-lab-zoo3-1  Started
+ Container hw4-zookeeper-lab-zoo2-1  Started
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+Connection dropped: socket connection broken
+quorum_write_available=True
+Connection dropped: socket connection broken
+ephemeral_created=/hw4-ephemeral-c7e9056400a24e4cb3c026ab1f52e078
+ephemeral_disappeared=True

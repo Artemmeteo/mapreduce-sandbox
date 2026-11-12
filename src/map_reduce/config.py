@@ -28,8 +28,8 @@ class S3Settings:
         return f"s3://{self.bucket}/{self.parquet_key}"
 
 
-def load_settings() -> S3Settings:
-    values = {}
+def load_environment() -> dict[str, str]:
+    values: dict[str, str] = {}
     env_file = ROOT / ".env"
     if env_file.exists():
         for line in env_file.read_text(encoding="utf-8").splitlines():
@@ -37,6 +37,11 @@ def load_settings() -> S3Settings:
                 key, value = line.split("=", 1)
                 values[key.strip()] = value.strip().strip('"').strip("'")
     values.update(os.environ)
+    return values
+
+
+def load_settings() -> S3Settings:
+    values = load_environment()
     return S3Settings(
         endpoint=values.get("S3_ENDPOINT", "http://127.0.0.1:9010"),
         access_key=values["S3_ACCESS_KEY"],

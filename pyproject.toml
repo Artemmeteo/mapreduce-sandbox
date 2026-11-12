@@ -10,6 +10,7 @@ requires-python = ">=3.11"
 dependencies = [
     "boto3==1.40.60",
     "duckdb==1.4.1",
+    "kazoo==2.11.0",
     "psutil==7.1.1",
 ]
 
@@ -25,3 +26,8 @@ map_reduce = ["infrastructure/sql/*.sql"]
 [tool.ruff]
 target-version = "py311"
 line-length = 100
+
+[dependency-groups]
+dev = [
+    "ruff==0.14.3",
+]

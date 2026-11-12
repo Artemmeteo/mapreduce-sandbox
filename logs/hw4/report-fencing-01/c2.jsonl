@@ -1,0 +1,30 @@
+{"event": "STARTED", "time": 1794499188.982831, "monotonic": 207041.736632833, "coordinator": "c2", "pid": 18568, "session_timeout": 10}
+{"event": "SESSION_STATE", "time": 1794499189.076277, "monotonic": 207041.830077166, "state": "CONNECTED"}
+{"event": "LEADER", "time": 1794499199.821154, "monotonic": 207052.57483125, "epoch": 25769803807, "pid": 18568}
+{"event": "RESTORED", "time": 1794499199.849622, "monotonic": 207052.603300125, "epoch": 25769803807, "rows": 250, "chunks": 1}
+{"event": "CHECKPOINT", "time": 1794499200.111927, "monotonic": 207052.865601916, "epoch": 25769803807, "rows": 500, "chunks": 2}
+{"event": "CHECKPOINT", "time": 1794499200.644334, "monotonic": 207053.398002291, "epoch": 25769803807, "rows": 750, "chunks": 3}
+{"event": "CHECKPOINT", "time": 1794499201.177699, "monotonic": 207053.931361583, "epoch": 25769803807, "rows": 1000, "chunks": 4}
+{"event": "CHECKPOINT", "time": 1794499201.718184, "monotonic": 207054.471840916, "epoch": 25769803807, "rows": 1250, "chunks": 5}
+{"event": "CHECKPOINT", "time": 1794499202.259549, "monotonic": 207055.013199708, "epoch": 25769803807, "rows": 1500, "chunks": 6}
+{"event": "CHECKPOINT", "time": 1794499202.8024461, "monotonic": 207055.556090875, "epoch": 25769803807, "rows": 1750, "chunks": 7}
+{"event": "CHECKPOINT", "time": 1794499203.34358, "monotonic": 207056.097219125, "epoch": 25769803807, "rows": 2000, "chunks": 8}
+{"event": "CHECKPOINT", "time": 1794499203.90151, "monotonic": 207056.655142583, "epoch": 25769803807, "rows": 2250, "chunks": 9}
+{"event": "CHECKPOINT", "time": 1794499204.43932, "monotonic": 207057.192947208, "epoch": 25769803807, "rows": 2500, "chunks": 10}
+{"event": "CHECKPOINT", "time": 1794499204.9859898, "monotonic": 207057.739611125, "epoch": 25769803807, "rows": 2750, "chunks": 11}
+{"event": "CHECKPOINT", "time": 1794499205.532483, "monotonic": 207058.286099, "epoch": 25769803807, "rows": 3000, "chunks": 12}
+{"event": "CHECKPOINT", "time": 1794499206.0760052, "monotonic": 207058.829615375, "epoch": 25769803807, "rows": 3250, "chunks": 13}
+{"event": "CHECKPOINT", "time": 1794499206.617939, "monotonic": 207059.371543291, "epoch": 25769803807, "rows": 3500, "chunks": 14}
+{"event": "CHECKPOINT", "time": 1794499207.1735659, "monotonic": 207059.927163791, "epoch": 25769803807, "rows": 3750, "chunks": 15}
+{"event": "CHECKPOINT", "time": 1794499207.7230022, "monotonic": 207060.476594291, "epoch": 25769803807, "rows": 4000, "chunks": 16}
+{"event": "CHECKPOINT", "time": 1794499208.2778418, "monotonic": 207061.0314285, "epoch": 25769803807, "rows": 4250, "chunks": 17}
+{"event": "CHECKPOINT", "time": 1794499208.8281732, "monotonic": 207061.581753875, "epoch": 25769803807, "rows": 4500, "chunks": 18}
+{"event": "CHECKPOINT", "time": 1794499209.374131, "monotonic": 207062.127705583, "epoch": 25769803807, "rows": 4750, "chunks": 19}
+{"event": "CHECKPOINT", "time": 1794499209.936162, "monotonic": 207062.689731541, "epoch": 25769803807, "rows": 5000, "chunks": 20}
+{"event": "CHECKPOINT", "time": 1794499210.50846, "monotonic": 207063.26202375, "epoch": 25769803807, "rows": 5250, "chunks": 21}
+{"event": "CHECKPOINT", "time": 1794499211.078023, "monotonic": 207063.831580375, "epoch": 25769803807, "rows": 5500, "chunks": 22}
+{"event": "CHECKPOINT", "time": 1794499211.6394272, "monotonic": 207064.392978375, "epoch": 25769803807, "rows": 5750, "chunks": 23}
+{"event": "CHECKPOINT", "time": 1794499212.1814919, "monotonic": 207064.93503875, "epoch": 25769803807, "rows": 6000, "chunks": 24}
+{"event": "CHECKPOINT", "time": 1794499212.744399, "monotonic": 207065.49793925, "epoch": 25769803807, "rows": 6100, "chunks": 25}
+{"event": "PUBLICATION_ACCEPTED", "time": 1794499213.310616, "monotonic": 207066.064151416, "epoch": 25769803807, "publication": 1, "rows": 6100}
+{"event": "SESSION_STATE", "time": 1794499213.362195, "monotonic": 207066.115728875, "state": "LOST"}

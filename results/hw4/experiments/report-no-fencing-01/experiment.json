@@ -1,0 +1,13 @@
+{
+  "run_id": "report-no-fencing-01",
+  "fencing": 0,
+  "session_timeout_seconds": 10,
+  "pause_seconds": 40.00094541700673,
+  "failover_seconds": 11.511396041983971,
+  "failover_measurement": "SIGSTOP sent -> standby registered receiver epoch",
+  "checkpoint_rows": 250,
+  "restored_rows": 250,
+  "accepted_publications": 2,
+  "resumed_write": "PUBLICATION_ACCEPTED",
+  "exact_match_hw3_pairs": true
+}
