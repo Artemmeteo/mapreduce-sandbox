@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "left": "/Users/artemmeteorolog/data_engineering/hw3_MapReduce/MapReduce_lab/results/mapreduce",
+  "right": "/Users/artemmeteorolog/data_engineering/hw3_MapReduce/MapReduce_lab/results/hw4/experiments/report-no-fencing-02/publication-01",
+  "checks": [
+    {
+      "k": 2,
+      "left_keys": 15755,
+      "right_keys": 15755,
+      "left_total": 104741,
+      "right_total": 104741,
+      "mismatch_count": 0,
+      "examples": []
+    }
+  ],
+  "population_matches": true
+}

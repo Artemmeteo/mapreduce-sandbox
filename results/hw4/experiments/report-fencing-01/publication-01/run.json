@@ -1,0 +1,14 @@
+{
+  "engine": "mapreduce-zookeeper",
+  "rows": 6100,
+  "with_skills": 4088,
+  "tasks": 25,
+  "controls": [
+    {
+      "k": 2,
+      "unique_combinations": 15755,
+      "total_occurrences": 104741,
+      "expected_sum_binomial": 104741
+    }
+  ]
+}
