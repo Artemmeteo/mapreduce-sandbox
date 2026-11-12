@@ -2,10 +2,8 @@ name: hw3-java-lab
 
 services:
   rustfs:
-    # Official release 1.0.0, pinned to its linux/arm64 manifest for Apple Silicon.
     image: rustfs/rustfs:1.0.0@sha256:42edb61d588775f9431ff436216d14392d2234d4eb2ed68321569fbf7245b36b
     platform: linux/arm64
-    # Match the macOS owner of the bind mounts; /data and /logs are both mounted.
     user: "${LOCAL_UID:?LOCAL_UID is required}:${LOCAL_GID:?LOCAL_GID is required}"
     restart: "no"
     environment:
@@ -15,7 +13,6 @@ services:
       RUSTFS_ADDRESS: ":9000"
       RUSTFS_CONSOLE_ADDRESS: ":9001"
       RUSTFS_CONSOLE_ENABLE: "true"
-      # Educational setup: all four folders share the same physical SSD.
       RUSTFS_UNSAFE_BYPASS_DISK_CHECK: "true"
       RUSTFS_ERASURE_SET_DRIVE_COUNT: "4"
       RUSTFS_STORAGE_CLASS_STANDARD: "EC:2"
@@ -37,7 +34,6 @@ services:
           create_host_path: false
 
   s3cli:
-    # On-demand client: docker compose run --rm s3cli <AWS CLI arguments>.
     image: amazon/aws-cli:2.36.45@sha256:f0c630a58b0e5772a58153cd989f34b905371d78bcdc45fdfdd5e212aec996c6
     platform: linux/arm64
     profiles: [tools]

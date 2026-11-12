@@ -9,7 +9,7 @@ class LeadershipLost(RuntimeError):
 
 
 class LeaderElection:
-    """Выбрать минимальный ephemeral sequential узел; czxid служит эпохой."""
+    """Выбрать минимальный ephemeral sequential узел, czxid служит эпохой"""
 
     def __init__(self, client: KazooClient, path: str, identifier: str):
         self.client = client

@@ -122,8 +122,6 @@ def calculate(
                 rows=progress.rows,
                 chunks=progress.chunks,
             )
-            # Keep obsolete in-flight work running in both educational experiments.
-            # Only the receiver may decide whether its final write is allowed.
             time.sleep(settings.chunk_delay)
     store.initialize(input_identity(storage, settings), settings.fencing)
     identifier = store.publish(epoch, settings.identifier, progress)
