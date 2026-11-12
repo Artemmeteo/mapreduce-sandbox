@@ -1,0 +1,34 @@
+{"event": "STARTED", "time": 1793623351.877603, "monotonic": 916832.28809625, "coordinator": "c1", "pid": 16613, "session_timeout": 10}
+{"event": "SESSION_STATE", "time": 1793623357.754373, "monotonic": 916838.164847666, "state": "CONNECTED"}
+{"event": "LEADER", "time": 1793623357.8198452, "monotonic": 916838.230319166, "epoch": 12884901902, "pid": 16613}
+{"event": "RESTORED", "time": 1793623357.825255, "monotonic": 916838.235728791, "epoch": 12884901902, "rows": 0, "chunks": 0}
+{"event": "CHECKPOINT", "time": 1793623357.917086, "monotonic": 916838.327560708, "epoch": 12884901902, "rows": 250, "chunks": 1}
+{"event": "SESSION_STATE", "time": 1793623397.9577322, "monotonic": 916878.368075583, "state": "SUSPENDED"}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623397.991263, "monotonic": 916878.401606416, "epoch": 12884901902, "rows": 500, "chunks": 2}
+{"event": "SESSION_STATE", "time": 1793623397.997237, "monotonic": 916878.407580041, "state": "LOST"}
+{"event": "SESSION_STATE", "time": 1793623398.037005, "monotonic": 916878.447347541, "state": "CONNECTED"}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623398.5075772, "monotonic": 916878.917918083, "epoch": 12884901902, "rows": 750, "chunks": 3}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623399.032174, "monotonic": 916879.442512833, "epoch": 12884901902, "rows": 1000, "chunks": 4}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623399.552895, "monotonic": 916879.963233208, "epoch": 12884901902, "rows": 1250, "chunks": 5}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623400.072193, "monotonic": 916880.482529041, "epoch": 12884901902, "rows": 1500, "chunks": 6}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623400.58768, "monotonic": 916880.998015, "epoch": 12884901902, "rows": 1750, "chunks": 7}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623401.108927, "monotonic": 916881.519260041, "epoch": 12884901902, "rows": 2000, "chunks": 8}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623401.634795, "monotonic": 916882.045125541, "epoch": 12884901902, "rows": 2250, "chunks": 9}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623402.168782, "monotonic": 916882.579110791, "epoch": 12884901902, "rows": 2500, "chunks": 10}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623402.69314, "monotonic": 916883.103468083, "epoch": 12884901902, "rows": 2750, "chunks": 11}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623403.2103522, "monotonic": 916883.620678083, "epoch": 12884901902, "rows": 3000, "chunks": 12}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623403.7268312, "monotonic": 916884.137154625, "epoch": 12884901902, "rows": 3250, "chunks": 13}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623404.2554939, "monotonic": 916884.665816166, "epoch": 12884901902, "rows": 3500, "chunks": 14}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623404.783124, "monotonic": 916885.193444791, "epoch": 12884901902, "rows": 3750, "chunks": 15}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623405.310626, "monotonic": 916885.720944916, "epoch": 12884901902, "rows": 4000, "chunks": 16}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623405.8366358, "monotonic": 916886.246954583, "epoch": 12884901902, "rows": 4250, "chunks": 17}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623406.3597069, "monotonic": 916886.770022791, "epoch": 12884901902, "rows": 4500, "chunks": 18}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623406.883399, "monotonic": 916887.293712833, "epoch": 12884901902, "rows": 4750, "chunks": 19}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623407.402271, "monotonic": 916887.812583791, "epoch": 12884901902, "rows": 5000, "chunks": 20}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623407.930923, "monotonic": 916888.341232875, "epoch": 12884901902, "rows": 5250, "chunks": 21}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623408.446896, "monotonic": 916888.85720525, "epoch": 12884901902, "rows": 5500, "chunks": 22}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623408.966698, "monotonic": 916889.377005416, "epoch": 12884901902, "rows": 5750, "chunks": 23}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623409.492667, "monotonic": 916889.902972208, "epoch": 12884901902, "rows": 6000, "chunks": 24}
+{"event": "CHECKPOINT_REJECTED", "time": 1793623410.004299, "monotonic": 916890.414602791, "epoch": 12884901902, "rows": 6100, "chunks": 25}
+{"event": "PUBLICATION_ACCEPTED", "time": 1793623410.5674, "monotonic": 916890.977701666, "epoch": 12884901902, "publication": 2, "rows": 6100}
+{"event": "SESSION_STATE", "time": 1793623410.675227, "monotonic": 916891.085528791, "state": "LOST"}
