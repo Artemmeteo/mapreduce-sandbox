@@ -89,6 +89,33 @@ def execute_mappers(rows, options: CountOptions):
                 yield output, attempt, max_inflight
 
 
+def write_counts(output: Path, reduced: Counter, expected: Counter, sizes: tuple[int, ...]) -> list:
+    controls = []
+    for size in sizes:
+        counts = sorted(
+            ((skills, count) for (k, skills), count in reduced.items() if k == size),
+            key=lambda item: (-item[1], item[0]),
+        )
+        total = sum(count for _, count in counts)
+        if total != expected[size]:
+            raise ValueError("Frequency total differs from sum of binomial coefficients")
+        controls.append(
+            {
+                "k": size,
+                "unique_combinations": len(counts),
+                "total_occurrences": total,
+                "expected_sum_binomial": expected[size],
+            }
+        )
+        fields = [f"skill_{position}" for position in range(1, size + 1)] + ["frequency"]
+        write_csv(
+            output / f"counts_k{size}.csv",
+            (dict(zip(fields, (*skills, count))) for skills, count in counts),
+            fields,
+        )
+    return controls
+
+
 def count_mapreduce(storage: S3Storage, output: Path, options: CountOptions) -> dict:
     reduced = Counter()
     intermediate = []
@@ -113,29 +140,7 @@ def count_mapreduce(storage: S3Storage, output: Path, options: CountOptions) -> 
             reduced[key] = sum(1 for _ in occurrences)
         del intermediate
 
-    controls = []
-    for size in options.sizes:
-        counts = sorted(
-            ((skills, count) for (k, skills), count in reduced.items() if k == size),
-            key=lambda item: (-item[1], item[0]),
-        )
-        total = sum(count for _, count in counts)
-        if total != expected[size]:
-            raise ValueError("Frequency total differs from sum of binomial coefficients")
-        controls.append(
-            {
-                "k": size,
-                "unique_combinations": len(counts),
-                "total_occurrences": total,
-                "expected_sum_binomial": expected[size],
-            }
-        )
-        fields = [f"skill_{position}" for position in range(1, size + 1)] + ["frequency"]
-        write_csv(
-            output / f"counts_k{size}.csv",
-            (dict(zip(fields, (*skills, count))) for skills, count in counts),
-            fields,
-        )
+    controls = write_counts(output, reduced, expected, options.sizes)
     result = {
         "engine": "mapreduce",
         "mode": options.mode,

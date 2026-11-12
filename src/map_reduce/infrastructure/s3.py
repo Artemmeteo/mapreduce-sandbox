@@ -41,8 +41,11 @@ class S3Storage:
         )
 
     @contextmanager
-    def rows(self) -> Iterator[csv.DictReader]:
-        response = self.client.get_object(Bucket=self.settings.bucket, Key=self.settings.object_key)
+    def rows(self, etag: str | None = None) -> Iterator[csv.DictReader]:
+        condition = {"IfMatch": etag} if etag is not None else {}
+        response = self.client.get_object(
+            Bucket=self.settings.bucket, Key=self.settings.object_key, **condition
+        )
         stream = io.TextIOWrapper(response["Body"], encoding="utf-8-sig", newline="")
         try:
             yield csv.DictReader(stream)
@@ -52,10 +55,11 @@ class S3Storage:
     def upload(self, path: Path, key: str) -> None:
         self.client.upload_file(str(path), self.settings.bucket, key)
 
-    def publish(self, results: Path) -> int:
+    def publish(self, results: Path, *, exclude_dirs: tuple[str, ...] = ()) -> int:
         count = 0
         for path in sorted(results.rglob("*")):
-            if path.is_file():
-                self.upload(path, "results/variant=3/" + path.relative_to(results).as_posix())
+            relative = path.relative_to(results)
+            if relative.parts[0] not in exclude_dirs and path.is_file():
+                self.upload(path, "results/variant=3/" + relative.as_posix())
                 count += 1
         return count

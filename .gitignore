@@ -9,3 +9,13 @@ results/data/*.csv
 results/data/*.parquet
 .DS_Store
 .ruff_cache/
+.pytest_cache/
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+# Координаторские logs/hw4/*.jsonl и небольшие результаты должны быть доступны Git.
+*.log
+!logs/hw4/**/*.log
+.env.*
+!.env.example
