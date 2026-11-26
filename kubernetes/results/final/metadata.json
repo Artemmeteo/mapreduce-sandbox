@@ -1,0 +1,70 @@
+{
+  "run_id": "run-03-0001",
+  "input_sha256": "a900fbbf01d5f64bdf3719261ecbdcccfafcf24002b48e8a29f14e9f709ec04c",
+  "reference": "results/mapreduce/counts_k2.csv",
+  "reference_sha256": "d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099",
+  "image": {
+    "tag": "mapreduce-lab:k8s",
+    "id": "sha256:a0eda35e9973838621fe60923ef541f4acc599b06528524db833beb17e3ddb2a",
+    "source_sha256": "8afa5252bc95a489feac6f85fc4e1bf0158d38a1ca20671792319f7316bcc79d"
+  },
+  "runtime_image_ids": [
+    "docker.io/library/import-2026-11-26@sha256:00d3e957fe979b1df027eefe01d3281f628e23606a38527005a736cf30dd8343"
+  ],
+  "parts": 2,
+  "parallelism": 2,
+  "resources": {
+    "reduce": {
+      "requests": {
+        "cpu": "250m",
+        "memory": "48Mi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "128Mi"
+      }
+    },
+    "reduce-repeat": {
+      "requests": {
+        "cpu": "250m",
+        "memory": "48Mi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "128Mi"
+      }
+    },
+    "retry": {
+      "requests": {
+        "cpu": "250m",
+        "memory": "48Mi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "96Mi"
+      }
+    },
+    "split": {
+      "requests": {
+        "cpu": "250m",
+        "memory": "48Mi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "192Mi"
+      }
+    },
+    "workers": {
+      "requests": {
+        "cpu": "250m",
+        "memory": "48Mi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "96Mi"
+      }
+    }
+  },
+  "logs": "kubernetes/logs/parallel/03-parallel/run-03-0001",
+  "results": "kubernetes/results/parallel/03-parallel/run-03-0001"
+}
