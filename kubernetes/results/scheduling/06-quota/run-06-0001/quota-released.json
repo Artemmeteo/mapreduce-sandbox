@@ -1,0 +1,33 @@
+{
+    "apiVersion": "v1",
+    "kind": "ResourceQuota",
+    "metadata": {
+        "creationTimestamp": "2026-11-26T15:46:42Z",
+        "name": "quota-run-06-0001",
+        "namespace": "de-k8s-quota",
+        "resourceVersion": "24687",
+        "uid": "9a2875be-ade6-47b5-9f2a-6ff11cab6fbc"
+    },
+    "spec": {
+        "hard": {
+            "limits.cpu": "1500m",
+            "limits.memory": "288Mi",
+            "requests.cpu": "1500m",
+            "requests.memory": "144Mi"
+        }
+    },
+    "status": {
+        "hard": {
+            "limits.cpu": "1500m",
+            "limits.memory": "288Mi",
+            "requests.cpu": "1500m",
+            "requests.memory": "144Mi"
+        },
+        "used": {
+            "limits.cpu": "0",
+            "limits.memory": "0",
+            "requests.cpu": "0",
+            "requests.memory": "0"
+        }
+    }
+}

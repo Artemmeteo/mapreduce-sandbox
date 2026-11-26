@@ -1,0 +1,16 @@
+{
+  "apiVersion": "v1",
+  "kind": "ResourceQuota",
+  "spec": {
+    "hard": {
+      "requests.cpu": "1500m",
+      "limits.cpu": "1500m",
+      "requests.memory": "144Mi",
+      "limits.memory": "288Mi"
+    }
+  },
+  "metadata": {
+    "name": "quota-run-06-0001",
+    "namespace": "de-k8s-quota"
+  }
+}

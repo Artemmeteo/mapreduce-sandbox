@@ -1,0 +1,52 @@
+[
+  {
+    "namespace": "de-k8s-lab",
+    "pod": "rustfs-58fb58687c-jxsfc",
+    "priority": 0
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "coredns-559f6c778d-b54cd",
+    "priority": 2000000000
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "coredns-559f6c778d-lvf54",
+    "priority": 2000000000
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "etcd-de-k8s-lab-control-plane",
+    "priority": 2000001000
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "kindnet-xlbbt",
+    "priority": 2000001000
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "kube-apiserver-de-k8s-lab-control-plane",
+    "priority": 2000001000
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "kube-controller-manager-de-k8s-lab-control-plane",
+    "priority": 2000001000
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "kube-proxy-dn8h4",
+    "priority": 2000001000
+  },
+  {
+    "namespace": "kube-system",
+    "pod": "kube-scheduler-de-k8s-lab-control-plane",
+    "priority": 2000001000
+  },
+  {
+    "namespace": "local-path-storage",
+    "pod": "local-path-provisioner-75f7fc7dc5-476hc",
+    "priority": 0
+  }
+]

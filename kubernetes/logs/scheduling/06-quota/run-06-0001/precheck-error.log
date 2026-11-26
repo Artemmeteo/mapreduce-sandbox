@@ -1,0 +1,2 @@
+На узле свободно 4800m CPU
+test: integer expression expected: ${FREE_M:-0}

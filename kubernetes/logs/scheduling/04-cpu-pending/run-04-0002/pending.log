@@ -1,0 +1,52 @@
+Name:             cpu-run-04-0002-4gnqj
+Namespace:        de-k8s-scheduling
+Priority:         0
+Service Account:  default
+Node:             <none>
+Labels:           batch.kubernetes.io/controller-uid=9161d639-55f3-4823-ac2d-bb77b62ea940
+                  batch.kubernetes.io/job-name=cpu-run-04-0002
+                  controller-uid=9161d639-55f3-4823-ac2d-bb77b62ea940
+                  job-name=cpu-run-04-0002
+Annotations:      <none>
+Status:           Pending
+IP:               
+IPs:              <none>
+Controlled By:    Job/cpu-run-04-0002
+Containers:
+  compute:
+    Image:      mapreduce-lab:k8s
+    Port:       <none>
+    Host Port:  <none>
+    Command:
+      python
+      -m
+      map_reduce.kubernetes_job
+    Args:
+      --output-prefix=kubernetes/scheduling/run-04-0002/cpu
+      --expected-sha256=a900fbbf01d5f64bdf3719261ecbdcccfafcf24002b48e8a29f14e9f709ec04c
+      --expected-rows=6100
+      --reference-sha256=d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099
+    Limits:
+      cpu:     1
+      memory:  96Mi
+    Requests:
+      cpu:     1
+      memory:  48Mi
+    Environment Variables from:
+      rustfs-external  Secret  Optional: false
+    Environment:
+      IMAGE_TAG:    mapreduce-lab:k8s
+      S3_ENDPOINT:  http://rustfs.de-k8s-lab.svc.cluster.local:9000
+    Mounts:         <none>
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:         <none>
+QoS Class:       Burstable
+Node-Selectors:  kubernetes.io/hostname=de-k8s-lab-control-plane
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age   From               Message
+  ----     ------            ----  ----               -------
+  Warning  FailedScheduling  0s    default-scheduler  0/1 nodes are available: 1 Insufficient cpu. preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.

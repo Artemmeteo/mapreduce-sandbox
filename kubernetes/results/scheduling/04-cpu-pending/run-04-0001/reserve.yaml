@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-reserve-run-04-0001
+  namespace: de-k8s-scheduling
+spec:
+  restartPolicy: Never
+  activeDeadlineSeconds: 240
+  automountServiceAccountToken: false
+  nodeSelector:
+    kubernetes.io/hostname: de-k8s-lab-control-plane
+  containers:
+    - name: reservation
+      image: mapreduce-lab:k8s
+      imagePullPolicy: Never
+      command: [sleep, "180"]
+      resources:
+        requests: {cpu: ${RESERVE_M}m, memory: 32Mi}
+        limits: {cpu: ${RESERVE_M}m, memory: 64Mi}

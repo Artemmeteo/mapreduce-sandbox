@@ -1,0 +1,236 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T15:40:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "low-run-05-0001-t8xcm",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23976",
+                "uid": "283ed3be-fde5-4f74-914b-6640e4025f74"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T15:40:03Z",
+            "message": "Successfully assigned de-k8s-scheduling/low-run-05-0001-t8xcm to de-k8s-lab-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T15:40:03Z",
+                "name": "low-run-05-0001-t8xcm.18eba28d0f227e56",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23980",
+                "uid": "7895c328-9afa-4084-8d8b-e64faa561310"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T15:40:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "low-run-05-0001-t8xcm",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23979",
+                "uid": "283ed3be-fde5-4f74-914b-6640e4025f74"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T15:40:03Z",
+            "message": "Container image \"mapreduce-lab:k8s\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T15:40:03Z",
+                "name": "low-run-05-0001-t8xcm.18eba28d1eba8b81",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23982",
+                "uid": "85b4cabc-27bf-4038-99e9-fe56d88f1ea6"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "de-k8s-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "de-k8s-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T15:40:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "low-run-05-0001-t8xcm",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23979",
+                "uid": "283ed3be-fde5-4f74-914b-6640e4025f74"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T15:40:03Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T15:40:03Z",
+                "name": "low-run-05-0001-t8xcm.18eba28d1fc58000",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23985",
+                "uid": "c464b1e3-ae54-4495-9b6c-c48d5bd60e3d"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "de-k8s-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "de-k8s-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T15:40:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "low-run-05-0001-t8xcm",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23979",
+                "uid": "283ed3be-fde5-4f74-914b-6640e4025f74"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T15:40:03Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T15:40:03Z",
+                "name": "low-run-05-0001-t8xcm.18eba28d252caf0d",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23986",
+                "uid": "88a5edba-ab73-4cb2-96c6-c8f93a1a3e6c"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "de-k8s-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "de-k8s-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 4,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T15:40:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "low-run-05-0001-t8xcm",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23979",
+                "uid": "283ed3be-fde5-4f74-914b-6640e4025f74"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T15:40:10Z",
+            "message": "Readiness probe failed: ",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T15:40:03Z",
+                "name": "low-run-05-0001-t8xcm.18eba28d278016e1",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "24014",
+                "uid": "33d24efd-a4c5-4c8c-90a8-b7cf5758a4a5"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "de-k8s-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "de-k8s-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T15:40:06Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "low-run-05-0001-t8xcm",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23994",
+                "uid": "283ed3be-fde5-4f74-914b-6640e4025f74"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T15:40:06Z",
+            "message": "Preempted by pod 019d842c-0c88-4c8c-b08b-c8fd12250631 on node de-k8s-lab-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T15:40:06Z",
+                "name": "low-run-05-0001-t8xcm.18eba28dd9a9b415",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "24003",
+                "uid": "16d86f8d-7390-47e8-bf5c-e63897638f0b"
+            },
+            "reason": "Preempted",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T15:40:07Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "low-run-05-0001-t8xcm",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23979",
+                "uid": "283ed3be-fde5-4f74-914b-6640e4025f74"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T15:40:07Z",
+            "message": "Stopping container compute",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T15:40:07Z",
+                "name": "low-run-05-0001-t8xcm.18eba28e0b034906",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "24007",
+                "uid": "6f9b7994-9f12-4d0c-9760-740d58d4ff9c"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "de-k8s-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "de-k8s-lab-control-plane"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

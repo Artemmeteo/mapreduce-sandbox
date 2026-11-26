@@ -1,0 +1,229 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T15:32:12Z",
+                "generateName": "cpu-run-04-0002-",
+                "generation": 1,
+                "labels": {
+                    "batch.kubernetes.io/controller-uid": "9161d639-55f3-4823-ac2d-bb77b62ea940",
+                    "batch.kubernetes.io/job-name": "cpu-run-04-0002",
+                    "controller-uid": "9161d639-55f3-4823-ac2d-bb77b62ea940",
+                    "job-name": "cpu-run-04-0002"
+                },
+                "name": "cpu-run-04-0002-4gnqj",
+                "namespace": "de-k8s-scheduling",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "batch/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Job",
+                        "name": "cpu-run-04-0002",
+                        "uid": "9161d639-55f3-4823-ac2d-bb77b62ea940"
+                    }
+                ],
+                "resourceVersion": "23358",
+                "uid": "60596ad8-2a6a-4bc4-ba3d-a7ecb647e523"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "args": [
+                            "--output-prefix=kubernetes/scheduling/run-04-0002/cpu",
+                            "--expected-sha256=a900fbbf01d5f64bdf3719261ecbdcccfafcf24002b48e8a29f14e9f709ec04c",
+                            "--expected-rows=6100",
+                            "--reference-sha256=d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099"
+                        ],
+                        "command": [
+                            "python",
+                            "-m",
+                            "map_reduce.kubernetes_job"
+                        ],
+                        "env": [
+                            {
+                                "name": "IMAGE_TAG",
+                                "value": "mapreduce-lab:k8s"
+                            },
+                            {
+                                "name": "S3_ENDPOINT",
+                                "value": "http://rustfs.de-k8s-lab.svc.cluster.local:9000"
+                            }
+                        ],
+                        "envFrom": [
+                            {
+                                "secretRef": {
+                                    "name": "rustfs-external"
+                                }
+                            }
+                        ],
+                        "image": "mapreduce-lab:k8s",
+                        "imagePullPolicy": "Never",
+                        "name": "compute",
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "96Mi"
+                            },
+                            "requests": {
+                                "cpu": "1",
+                                "memory": "48Mi"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "de-k8s-lab-control-plane",
+                "nodeSelector": {
+                    "kubernetes.io/hostname": "de-k8s-lab-control-plane"
+                },
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ]
+            },
+            "status": {
+                "allocatedResources": {
+                    "cpu": "1",
+                    "memory": "48Mi"
+                },
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-26T15:32:46Z",
+                        "message": "pod sandbox is not ready",
+                        "observedGeneration": 1,
+                        "reason": "PodSandboxNotReady",
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-26T15:32:43Z",
+                        "observedGeneration": 1,
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-26T15:32:45Z",
+                        "observedGeneration": 1,
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-26T15:32:45Z",
+                        "observedGeneration": 1,
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-26T15:32:43Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "allocatedResources": {
+                            "cpu": "1",
+                            "memory": "48Mi"
+                        },
+                        "containerID": "containerd://c021361580c841d4d31f14e831724e2eac3d941ea7edfdf58f9be109699ae2db",
+                        "image": "docker.io/library/mapreduce-lab:k8s",
+                        "imageID": "docker.io/library/import-2026-11-26@sha256:00d3e957fe979b1df027eefe01d3281f628e23606a38527005a736cf30dd8343",
+                        "lastState": {},
+                        "name": "compute",
+                        "ready": false,
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "96Mi"
+                            },
+                            "requests": {
+                                "cpu": "1",
+                                "memory": "48Mi"
+                            }
+                        },
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://c021361580c841d4d31f14e831724e2eac3d941ea7edfdf58f9be109699ae2db",
+                                "exitCode": 0,
+                                "finishedAt": "2026-11-26T15:32:45Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-11-26T15:32:43Z"
+                            }
+                        },
+                        "user": {
+                            "linux": {
+                                "gid": 0,
+                                "supplementalGroups": [
+                                    0
+                                ],
+                                "uid": 10001
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "192.168.16.2",
+                "hostIPs": [
+                    {
+                        "ip": "192.168.16.2"
+                    }
+                ],
+                "observedGeneration": 1,
+                "phase": "Succeeded",
+                "podIP": "10.244.0.47",
+                "podIPs": [
+                    {
+                        "ip": "10.244.0.47"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "resources": {
+                    "requests": {
+                        "memory": "48Mi"
+                    }
+                },
+                "startTime": "2026-11-26T15:32:43Z"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

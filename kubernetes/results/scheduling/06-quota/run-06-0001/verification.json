@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "run_id": "run-06-0001",
+  "node_free_cpu_m": 4800,
+  "combined_cpu_requests_m": 2000,
+  "occupied": {
+    "hard": {
+      "limits.cpu": "1500m",
+      "limits.memory": "288Mi",
+      "requests.cpu": "1500m",
+      "requests.memory": "144Mi"
+    },
+    "used": {
+      "limits.cpu": "1",
+      "limits.memory": "96Mi",
+      "requests.cpu": "1",
+      "requests.memory": "48Mi"
+    }
+  },
+  "released": {
+    "hard": {
+      "limits.cpu": "1500m",
+      "limits.memory": "288Mi",
+      "requests.cpu": "1500m",
+      "requests.memory": "144Mi"
+    },
+    "used": {
+      "limits.cpu": "0",
+      "limits.memory": "0",
+      "requests.cpu": "0",
+      "requests.memory": "0"
+    }
+  },
+  "api_exit_code": 1,
+  "denial": "Error from server (Forbidden): error when creating \"kubernetes/results/scheduling/06-quota/run-06-0001/extra.json\": pods \"extra-run-06-0001\" is forbidden: exceeded quota: quota-run-06-0001, requested: limits.cpu=1,requests.cpu=1, used: limits.cpu=1,requests.cpu=1, limited: limits.cpu=1500m,requests.cpu=1500m",
+  "admitted_pod": "extra-run-06-0001",
+  "admitted_uid": "125ae7d0-b668-4735-8708-492dfd61cca4",
+  "termination": {
+    "containerID": "containerd://1a33ea5adc4ee0ccd968cc2d7a803c98b26a0026f01184f0a0847929bb424a9e",
+    "exitCode": 0,
+    "finishedAt": "2026-11-26T15:47:19Z",
+    "reason": "Completed",
+    "startedAt": "2026-11-26T15:47:17Z"
+  },
+  "verification": {
+    "passed": true,
+    "rows": 6100,
+    "sha256": "d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099",
+    "reference_sha256": "d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099"
+  }
+}
