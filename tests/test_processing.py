@@ -69,6 +69,39 @@ class ProcessingTests(unittest.TestCase):
                 load_counts(output / "counts_k3.csv", 3), {("docker", "java", "sql"): 1}
             )
 
+    def test_inline_matches_pool_including_retry_and_empty_skills(self):
+        rows = [{"key_skills": text} for text in
+                ("Java; JAVA; SQL", "", "sql;docker", "java;sql;docker", " java ")]
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            for mode in ("optimized", "baseline"):
+                for execution in ("inline", "process-pool"):
+                    output = root / mode / execution
+                    result = count_mapreduce(
+                        MemoryStorage(rows), output,
+                        CountOptions(mode=mode, execution=execution, workers=1,
+                                     chunk_size=2, failure_chunk=1),
+                    )
+                    self.assertEqual((result["rows"], result["with_skills"], result["retries"]),
+                                     (5, 4, 1))
+                for size in (1, 2, 3):
+                    self.assertEqual(
+                        (root / mode / "inline" / f"counts_k{size}.csv").read_bytes(),
+                        (root / mode / "process-pool" / f"counts_k{size}.csv").read_bytes(),
+                    )
+
+    def test_inline_requires_one_worker(self):
+        with self.assertRaisesRegex(ValueError, "workers=1"):
+            CountOptions(execution="inline", workers=2)
+
+    def test_inline_exhausted_retry_fails_the_computation(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            with self.assertRaisesRegex(RuntimeError, "Mapper 0 failed after 1 attempt"):
+                count_mapreduce(
+                    MemoryStorage([{"key_skills": "java;sql"}]), Path(temporary),
+                    CountOptions(execution="inline", workers=1, retries=0, failure_chunk=0),
+                )
+
     def test_latest_snapshot_is_chosen_before_variant_filter(self):
         fields = [
             "source",
