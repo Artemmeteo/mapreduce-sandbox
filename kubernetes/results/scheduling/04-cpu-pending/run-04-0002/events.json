@@ -1,0 +1,170 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T15:32:12Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "cpu-run-04-0002-4gnqj",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23286",
+                "uid": "60596ad8-2a6a-4bc4-ba3d-a7ecb647e523"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T15:32:12Z",
+            "message": "0/1 nodes are available: 1 Insufficient cpu. preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T15:32:12Z",
+                "name": "cpu-run-04-0002-4gnqj.18eba21f892a93da",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23289",
+                "uid": "576681ef-1387-44f2-890f-50ce5323e0f5"
+            },
+            "reason": "FailedScheduling",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T15:32:43Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "cpu-run-04-0002-4gnqj",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23290",
+                "uid": "60596ad8-2a6a-4bc4-ba3d-a7ecb647e523"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T15:32:43Z",
+            "message": "Successfully assigned de-k8s-scheduling/cpu-run-04-0002-4gnqj to de-k8s-lab-control-plane",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T15:32:43Z",
+                "name": "cpu-run-04-0002-4gnqj.18eba226a54f6a5f",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23338",
+                "uid": "0c05e03c-0cef-4170-9d15-2fff09ebb07c"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T15:32:43Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "cpu-run-04-0002-4gnqj",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23337",
+                "uid": "60596ad8-2a6a-4bc4-ba3d-a7ecb647e523"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T15:32:43Z",
+            "message": "Container image \"mapreduce-lab:k8s\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T15:32:43Z",
+                "name": "cpu-run-04-0002-4gnqj.18eba226aa186de3",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23340",
+                "uid": "ea09d14f-bee6-4a85-bffa-ddaae3243a2d"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "de-k8s-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "de-k8s-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T15:32:43Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "cpu-run-04-0002-4gnqj",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23337",
+                "uid": "60596ad8-2a6a-4bc4-ba3d-a7ecb647e523"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T15:32:43Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T15:32:43Z",
+                "name": "cpu-run-04-0002-4gnqj.18eba226aa8da319",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23342",
+                "uid": "2d2804fc-6139-46e2-b195-92442b8bdfe9"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "de-k8s-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "de-k8s-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-11-26T15:32:43Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{compute}",
+                "kind": "Pod",
+                "name": "cpu-run-04-0002-4gnqj",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23337",
+                "uid": "60596ad8-2a6a-4bc4-ba3d-a7ecb647e523"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-11-26T15:32:43Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-11-26T15:32:43Z",
+                "name": "cpu-run-04-0002-4gnqj.18eba226ad29c56a",
+                "namespace": "de-k8s-scheduling",
+                "resourceVersion": "23343",
+                "uid": "a8065ac2-e48e-4291-aeca-c7fc09eb8355"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "de-k8s-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "de-k8s-lab-control-plane"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

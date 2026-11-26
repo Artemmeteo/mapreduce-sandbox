@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "node": "de-k8s-lab-control-plane",
+  "allocatable_cpu_m": 6000,
+  "existing_cpu_requests_m": 1200,
+  "reserve_cpu_m": 4300,
+  "job_cpu_request_m": 1000,
+  "free_cpu_with_reserve_m": 500,
+  "pod_uid": "60596ad8-2a6a-4bc4-ba3d-a7ecb647e523",
+  "pending_condition": {
+    "lastProbeTime": null,
+    "lastTransitionTime": "2026-11-26T15:32:12Z",
+    "message": "0/1 nodes are available: 1 Insufficient cpu. preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.",
+    "observedGeneration": 1,
+    "reason": "Unschedulable",
+    "status": "False",
+    "type": "PodScheduled"
+  },
+  "failed_scheduling": {
+    "apiVersion": "v1",
+    "count": 1,
+    "eventTime": null,
+    "firstTimestamp": "2026-11-26T15:32:12Z",
+    "involvedObject": {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "name": "cpu-run-04-0002-4gnqj",
+      "namespace": "de-k8s-scheduling",
+      "resourceVersion": "23286",
+      "uid": "60596ad8-2a6a-4bc4-ba3d-a7ecb647e523"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-11-26T15:32:12Z",
+    "message": "0/1 nodes are available: 1 Insufficient cpu. preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.",
+    "metadata": {
+      "creationTimestamp": "2026-11-26T15:32:12Z",
+      "name": "cpu-run-04-0002-4gnqj.18eba21f892a93da",
+      "namespace": "de-k8s-scheduling",
+      "resourceVersion": "23289",
+      "uid": "576681ef-1387-44f2-890f-50ce5323e0f5"
+    },
+    "reason": "FailedScheduling",
+    "reportingComponent": "default-scheduler",
+    "reportingInstance": "",
+    "source": {
+      "component": "default-scheduler"
+    },
+    "type": "Warning"
+  },
+  "scheduled": {
+    "apiVersion": "v1",
+    "count": 1,
+    "eventTime": null,
+    "firstTimestamp": "2026-11-26T15:32:43Z",
+    "involvedObject": {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "name": "cpu-run-04-0002-4gnqj",
+      "namespace": "de-k8s-scheduling",
+      "resourceVersion": "23290",
+      "uid": "60596ad8-2a6a-4bc4-ba3d-a7ecb647e523"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-11-26T15:32:43Z",
+    "message": "Successfully assigned de-k8s-scheduling/cpu-run-04-0002-4gnqj to de-k8s-lab-control-plane",
+    "metadata": {
+      "creationTimestamp": "2026-11-26T15:32:43Z",
+      "name": "cpu-run-04-0002-4gnqj.18eba226a54f6a5f",
+      "namespace": "de-k8s-scheduling",
+      "resourceVersion": "23338",
+      "uid": "0c05e03c-0cef-4170-9d15-2fff09ebb07c"
+    },
+    "reason": "Scheduled",
+    "reportingComponent": "default-scheduler",
+    "reportingInstance": "",
+    "source": {
+      "component": "default-scheduler"
+    },
+    "type": "Normal"
+  },
+  "schedule_delay_seconds_at_event_precision": 31.0,
+  "termination": {
+    "containerID": "containerd://c021361580c841d4d31f14e831724e2eac3d941ea7edfdf58f9be109699ae2db",
+    "exitCode": 0,
+    "finishedAt": "2026-11-26T15:32:45Z",
+    "reason": "Completed",
+    "startedAt": "2026-11-26T15:32:43Z"
+  },
+  "verification": {
+    "passed": true,
+    "rows": 6100,
+    "sha256": "d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099",
+    "reference_sha256": "d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099"
+  }
+}

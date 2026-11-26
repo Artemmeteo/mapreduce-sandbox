@@ -1,0 +1,83 @@
+Name:               de-k8s-lab-control-plane
+Roles:              control-plane
+Labels:             beta.kubernetes.io/arch=arm64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=arm64
+                    kubernetes.io/hostname=de-k8s-lab-control-plane
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/control-plane=
+Annotations:        node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Thu, 26 Nov 2026 14:05:42 +0300
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  de-k8s-lab-control-plane
+  AcquireTime:     <unset>
+  RenewTime:       Thu, 26 Nov 2026 18:44:17 +0300
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Thu, 26 Nov 2026 18:42:17 +0300   Thu, 26 Nov 2026 14:05:41 +0300   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Thu, 26 Nov 2026 18:42:17 +0300   Thu, 26 Nov 2026 14:05:41 +0300   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Thu, 26 Nov 2026 18:42:17 +0300   Thu, 26 Nov 2026 14:05:41 +0300   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Thu, 26 Nov 2026 18:42:17 +0300   Thu, 26 Nov 2026 14:06:04 +0300   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.16.2
+  Hostname:    de-k8s-lab-control-plane
+Capacity:
+  cpu:                6
+  ephemeral-storage:  134681202688
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             4010552Ki
+  pods:               110
+Allocatable:
+  cpu:                6
+  ephemeral-storage:  134681202688
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             4010552Ki
+  pods:               110
+System Info:
+  Machine ID:                 4e5eba858ca74e8ea5b085b198a47e8d
+  System UUID:                4e5eba858ca74e8ea5b085b198a47e8d
+  Boot ID:                    01eff30c-6184-499b-93d6-78ceea761af8
+  Kernel Version:             7.0.14-linuxkit
+  OS Image:                   Debian GNU/Linux 13 (trixie)
+  Operating System:           linux
+  Architecture:               arm64
+  Container Runtime Version:  containerd://2.3.4
+  Kubelet Version:            v1.37.0
+PodCIDR:                      10.244.0.0/24
+PodCIDRs:                     10.244.0.0/24
+ProviderID:                   kind://docker/de-k8s-lab/de-k8s-lab-control-plane
+Non-terminated Pods:          (10 in total)
+  Namespace                   Name                                                CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                                ------------  ----------  ---------------  -------------  ---
+  de-k8s-lab                  rustfs-58fb58687c-jxsfc                             250m (4%)     1 (16%)     128Mi (3%)       512Mi (13%)    25m
+  kube-system                 coredns-559f6c778d-b54cd                            100m (1%)     0 (0%)      70Mi (1%)        170Mi (4%)     4h38m
+  kube-system                 coredns-559f6c778d-lvf54                            100m (1%)     0 (0%)      70Mi (1%)        170Mi (4%)     4h38m
+  kube-system                 etcd-de-k8s-lab-control-plane                       100m (1%)     0 (0%)      100Mi (2%)       0 (0%)         4h38m
+  kube-system                 kindnet-xlbbt                                       100m (1%)     0 (0%)      50Mi (1%)        0 (0%)         4h38m
+  kube-system                 kube-apiserver-de-k8s-lab-control-plane             250m (4%)     0 (0%)      0 (0%)           0 (0%)         4h38m
+  kube-system                 kube-controller-manager-de-k8s-lab-control-plane    200m (3%)     0 (0%)      0 (0%)           0 (0%)         4h38m
+  kube-system                 kube-proxy-dn8h4                                    0 (0%)        0 (0%)      0 (0%)           0 (0%)         4h38m
+  kube-system                 kube-scheduler-de-k8s-lab-control-plane             100m (1%)     0 (0%)      0 (0%)           0 (0%)         4h38m
+  local-path-storage          local-path-provisioner-75f7fc7dc5-476hc             0 (0%)        0 (0%)      0 (0%)           0 (0%)         4h38m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests     Limits
+  --------           --------     ------
+  cpu                1200m (20%)  1 (16%)
+  memory             418Mi (10%)  852Mi (21%)
+  ephemeral-storage  0 (0%)       0 (0%)
+  hugepages-1Gi      0 (0%)       0 (0%)
+  hugepages-2Mi      0 (0%)       0 (0%)
+  hugepages-32Mi     0 (0%)       0 (0%)
+  hugepages-64Ki     0 (0%)       0 (0%)
+Events:              <none>

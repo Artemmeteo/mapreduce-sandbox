@@ -1,0 +1,91 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "name": "low-run-05-0001",
+    "namespace": "de-k8s-scheduling"
+  },
+  "spec": {
+    "backoffLimit": 0,
+    "activeDeadlineSeconds": 180,
+    "template": {
+      "spec": {
+        "restartPolicy": "Never",
+        "automountServiceAccountToken": false,
+        "nodeSelector": {
+          "kubernetes.io/hostname": "de-k8s-lab-control-plane"
+        },
+        "containers": [
+          {
+            "name": "compute",
+            "image": "mapreduce-lab:k8s",
+            "imagePullPolicy": "Never",
+            "command": [
+              "sh",
+              "-c",
+              "python -m map_reduce.kubernetes_job --output-prefix=\"kubernetes/scheduling/run-05-0001/low/$HOSTNAME\" \"$@\" && touch /tmp/results-published && sleep 75",
+              "--"
+            ],
+            "args": [
+              "--expected-sha256=a900fbbf01d5f64bdf3719261ecbdcccfafcf24002b48e8a29f14e9f709ec04c",
+              "--expected-rows=6100",
+              "--reference-sha256=d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099"
+            ],
+            "env": [
+              {
+                "name": "IMAGE_TAG",
+                "value": "mapreduce-lab:k8s"
+              },
+              {
+                "name": "S3_ENDPOINT",
+                "value": "http://rustfs.de-k8s-lab.svc.cluster.local:9000"
+              }
+            ],
+            "envFrom": [
+              {
+                "secretRef": {
+                  "name": "rustfs-external"
+                }
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "4300m",
+                "memory": "48Mi"
+              },
+              "limits": {
+                "cpu": "4300m",
+                "memory": "96Mi"
+              }
+            },
+            "readinessProbe": {
+              "exec": {
+                "command": [
+                  "test",
+                  "-f",
+                  "/tmp/results-published"
+                ]
+              },
+              "periodSeconds": 1
+            }
+          }
+        ],
+        "priorityClassName": "low-run-05-0001",
+        "terminationGracePeriodSeconds": 3
+      }
+    },
+    "podFailurePolicy": {
+      "rules": [
+        {
+          "action": "Ignore",
+          "onPodConditions": [
+            {
+              "type": "DisruptionTarget",
+              "status": "True"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

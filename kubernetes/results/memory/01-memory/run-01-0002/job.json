@@ -1,0 +1,41 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {"name": "pairs-run-01-0002", "namespace": "de-k8s-lab"},
+  "spec": {
+    "backoffLimit": 0,
+    "activeDeadlineSeconds": 300,
+    "template": {
+      "metadata": {"labels": {"app": "mapreduce-pairs"}},
+      "spec": {
+        "restartPolicy": "Never",
+        "automountServiceAccountToken": false,
+        "containers": [{
+          "name": "compute",
+          "image": "mapreduce-lab:k8s",
+          "imagePullPolicy": "Never",
+          "command": ["python", "-m", "map_reduce.kubernetes_job"],
+          "args": [
+            "--output-prefix=kubernetes/memory/run-01-0002",
+            "--expected-sha256=a900fbbf01d5f64bdf3719261ecbdcccfafcf24002b48e8a29f14e9f709ec04c",
+            "--expected-rows=6100",
+            "--reference-sha256=d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099"
+          ],
+          "env": [
+            {"name": "IMAGE_TAG", "value": "mapreduce-lab:k8s"},
+            {"name": "S3_ENDPOINT", "value": "http://host.docker.internal:9010"},
+            {"name": "S3_BUCKET", "value": "hh-lake"},
+            {"name": "S3_OBJECT_KEY", "value": "variant=3/java_vacancies.csv"},
+            {"name": "S3_ACCESS_KEY", "valueFrom": {"secretKeyRef": {"name": "rustfs-external", "key": "S3_ACCESS_KEY"}}},
+            {"name": "S3_SECRET_KEY", "valueFrom": {"secretKeyRef": {"name": "rustfs-external", "key": "S3_SECRET_KEY"}}}
+          ],
+          "resources": {
+            "requests": {"cpu": "250m", "memory": "32Mi"},
+            "limits": {"cpu": "1", "memory": "44Mi"}
+          },
+          "securityContext": {"allowPrivilegeEscalation": false, "capabilities": {"drop": ["ALL"]}}
+        }]
+      }
+    }
+  }
+}

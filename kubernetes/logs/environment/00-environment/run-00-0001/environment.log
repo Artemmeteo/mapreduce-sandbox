@@ -1,0 +1,5 @@
+Thu Nov 26 14:44:27 UTC 2026
+Engine=29.9.2 Arch=aarch64 CPU=6 RAM_bytes=4106805248
+de-k8s-lab
+NAME                       STATUS   ROLES           AGE     VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION            CONTAINER-RUNTIME
+de-k8s-lab-control-plane   Ready    control-plane   3h38m   v1.37.0   192.168.16.2   <none>        Debian GNU/Linux 13 (trixie)   7.0.14-linuxkit (arm64)   containerd://2.3.4

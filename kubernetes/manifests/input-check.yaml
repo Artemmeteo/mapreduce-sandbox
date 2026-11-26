@@ -1,0 +1,34 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: input-check-run-00-0001
+  namespace: de-k8s-lab
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 90
+  template:
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      containers:
+        - name: compute
+          image: mapreduce-lab:k8s
+          imagePullPolicy: Never
+          command: [python, -m, map_reduce.kubernetes_job]
+          args:
+            - --preflight
+            - --output-prefix=kubernetes/environment/run-00-0001
+            - --expected-sha256=a900fbbf01d5f64bdf3719261ecbdcccfafcf24002b48e8a29f14e9f709ec04c
+            - --expected-rows=6100
+            - --reference-sha256=d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099
+          env:
+            - name: IMAGE_TAG
+              value: mapreduce-lab:k8s
+            - name: S3_ENDPOINT
+              value: http://host.docker.internal:9010
+          envFrom:
+            - secretRef:
+                name: rustfs-external
+          resources:
+            requests: {cpu: 250m, memory: 32Mi}
+            limits: {cpu: "1", memory: 256Mi}

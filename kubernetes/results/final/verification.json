@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "mismatch_count": 0,
+  "rows": 6100,
+  "with_skills": 4088,
+  "unique_pairs": 15755,
+  "total_occurrences": 104741,
+  "top10_matches": true,
+  "reference_sha256": "d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099",
+  "counts_sha256": "d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099",
+  "top10_sha256": "1df905e3ad0799f3147c28266551532cb4beae2f61d2dc54b8c87ee802b0d3d0",
+  "retry_matches": true,
+  "repeat_reduce_matches": true,
+  "retried_part_id": 0,
+  "retried_part_sha256": "7d845e27c8a69892342ca17a510c8ed5933282c6e58d852e016a8c8f29cc3c5d"
+}

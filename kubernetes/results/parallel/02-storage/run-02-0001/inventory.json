@@ -1,0 +1,42 @@
+{
+  "run_id": "run-02-0001",
+  "persisted": true,
+  "before_pod": {
+    "name": "rustfs-7c4ddb58b4-l6mpk",
+    "uid": "18107868-ada1-4e27-a38e-8d4954209f4d"
+  },
+  "after_pod": {
+    "name": "rustfs-58fb58687c-jxsfc",
+    "uid": "d8b48b22-6feb-4e1e-880f-2ee721a69edf"
+  },
+  "pvc_name": "rustfs-data",
+  "pvc_uid": "c9786934-266d-41a6-8580-4ebe9b7d387c",
+  "pv": "pvc-c9786934-266d-41a6-8580-4ebe9b7d387c",
+  "storage_class": "standard",
+  "migrated_objects": 1,
+  "migrated_bytes": 22914382,
+  "copy": {
+    "mode": "copy",
+    "source_endpoint": "http://host.docker.internal:9010",
+    "target_endpoint": "http://rustfs.de-k8s-lab.svc.cluster.local:9000",
+    "bucket": "hh-lake",
+    "key": "variant=3/java_vacancies.csv",
+    "bytes": 22914382,
+    "sha256": "a900fbbf01d5f64bdf3719261ecbdcccfafcf24002b48e8a29f14e9f709ec04c",
+    "control_key": "kubernetes/storage/run-02-0001/control",
+    "control_sha256": "96157a485ad79949810a05a4d33a27c2e5150848d9c1909796488fe01c775911",
+    "control_bytes": 11
+  },
+  "readback": {
+    "mode": "readback",
+    "source_endpoint": "http://host.docker.internal:9010",
+    "target_endpoint": "http://rustfs.de-k8s-lab.svc.cluster.local:9000",
+    "bucket": "hh-lake",
+    "key": "variant=3/java_vacancies.csv",
+    "bytes": 22914382,
+    "sha256": "a900fbbf01d5f64bdf3719261ecbdcccfafcf24002b48e8a29f14e9f709ec04c",
+    "control_key": "kubernetes/storage/run-02-0001/control",
+    "control_sha256": "96157a485ad79949810a05a4d33a27c2e5150848d9c1909796488fe01c775911",
+    "control_bytes": 11
+  }
+}

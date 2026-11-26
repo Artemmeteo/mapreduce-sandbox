@@ -1,0 +1,9 @@
+{
+  "sha256": "a900fbbf01d5f64bdf3719261ecbdcccfafcf24002b48e8a29f14e9f709ec04c",
+  "rows": 6100,
+  "bytes": 22914382,
+  "s3_uri": "s3://hh-lake/variant=3/java_vacancies.csv",
+  "verified_at_utc": "2026-11-26T15:07:08.516955+00:00",
+  "stage": "complete",
+  "job": "input-check-run-00-0001"
+}

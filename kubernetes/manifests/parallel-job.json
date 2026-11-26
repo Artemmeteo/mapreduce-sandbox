@@ -1,0 +1,35 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {"name": "split-run-03-0001", "namespace": "de-k8s-lab"},
+  "spec": {
+    "backoffLimit": 0,
+    "activeDeadlineSeconds": 90,
+    "template": {
+      "spec": {
+        "restartPolicy": "Never",
+        "automountServiceAccountToken": false,
+        "containers": [{
+          "name": "compute",
+          "image": "mapreduce-lab:k8s",
+          "imagePullPolicy": "Never",
+          "command": ["python", "-m", "map_reduce.parallel"],
+          "args": [
+            "split",
+            "kubernetes/parallel/run-03-0001",
+            "a900fbbf01d5f64bdf3719261ecbdcccfafcf24002b48e8a29f14e9f709ec04c",
+            "6100"
+          ],
+          "env": [
+            {"name": "S3_ENDPOINT", "value": "http://rustfs.de-k8s-lab.svc.cluster.local:9000"}
+          ],
+          "envFrom": [{"secretRef": {"name": "rustfs-external"}}],
+          "resources": {
+            "requests": {"cpu": "250m", "memory": "48Mi"},
+            "limits": {"cpu": "1", "memory": "192Mi"}
+          }
+        }]
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "low_priority": -20,
+  "high_priority": -10,
+  "victim_uid": "283ed3be-fde5-4f74-914b-6640e4025f74",
+  "high_uid": "019d842c-0c88-4c8c-b08b-c8fd12250631",
+  "scheduler_event": {
+    "apiVersion": "v1",
+    "count": 1,
+    "eventTime": null,
+    "firstTimestamp": "2026-11-26T15:40:06Z",
+    "involvedObject": {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "name": "low-run-05-0001-t8xcm",
+      "namespace": "de-k8s-scheduling",
+      "resourceVersion": "23994",
+      "uid": "283ed3be-fde5-4f74-914b-6640e4025f74"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-11-26T15:40:06Z",
+    "message": "Preempted by pod 019d842c-0c88-4c8c-b08b-c8fd12250631 on node de-k8s-lab-control-plane",
+    "metadata": {
+      "creationTimestamp": "2026-11-26T15:40:06Z",
+      "name": "low-run-05-0001-t8xcm.18eba28dd9a9b415",
+      "namespace": "de-k8s-scheduling",
+      "resourceVersion": "24003",
+      "uid": "16d86f8d-7390-47e8-bf5c-e63897638f0b"
+    },
+    "reason": "Preempted",
+    "reportingComponent": "default-scheduler",
+    "reportingInstance": "",
+    "source": {
+      "component": "default-scheduler"
+    },
+    "type": "Normal"
+  },
+  "disruption_target": {
+    "lastProbeTime": null,
+    "lastTransitionTime": "2026-11-26T15:40:06Z",
+    "message": "default-scheduler: preempting to accommodate a higher priority pod",
+    "observedGeneration": 1,
+    "reason": "PreemptionByScheduler",
+    "status": "True",
+    "type": "DisruptionTarget"
+  },
+  "replacements": [
+    {
+      "name": "low-run-05-0001-h6pt8",
+      "uid": "7f7ef78e-aa12-41e5-9ae7-3a206357697f",
+      "phase": "Running"
+    }
+  ],
+  "high_termination": {
+    "containerID": "containerd://3e90810ab720ee590b2ac427c1119cbedd2a33f72ce24d4898d8f50158b17d30",
+    "exitCode": 0,
+    "finishedAt": "2026-11-26T15:40:19Z",
+    "reason": "Completed",
+    "startedAt": "2026-11-26T15:40:10Z"
+  },
+  "verification": {
+    "passed": true,
+    "rows": 6100,
+    "sha256": "d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099",
+    "reference_sha256": "d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099"
+  }
+}

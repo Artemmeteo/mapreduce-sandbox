@@ -9,3 +9,5 @@ results/data/*.csv
 results/data/*.parquet
 .DS_Store
 .ruff_cache/
+
+!kubernetes/**/*.log

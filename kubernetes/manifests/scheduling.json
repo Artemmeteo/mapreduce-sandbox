@@ -1,0 +1,14 @@
+{
+  "reservation_remainder_m": 500,
+  "compute_request_m": 1000,
+  "compute_memory_request": "48Mi",
+  "compute_memory_limit": "96Mi",
+  "priority_classes": {
+    "low": {"apiVersion":"scheduling.k8s.io/v1","kind":"PriorityClass","globalDefault":false,"preemptionPolicy":"Never"},
+    "high":{"apiVersion":"scheduling.k8s.io/v1","kind":"PriorityClass","globalDefault":false,"preemptionPolicy":"PreemptLowerPriority"}
+  },
+  "quota": {
+    "apiVersion":"v1","kind":"ResourceQuota",
+    "spec":{"hard":{"requests.cpu":"1500m","limits.cpu":"1500m","requests.memory":"144Mi","limits.memory":"288Mi"}}
+  }
+}

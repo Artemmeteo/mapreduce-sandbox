@@ -1,0 +1,73 @@
+Name:             pairs-run-01-0002-6pq7r
+Namespace:        de-k8s-lab
+Priority:         0
+Service Account:  default
+Node:             de-k8s-lab-control-plane/192.168.16.2
+Start Time:       Thu, 26 Nov 2026 18:14:06 +0300
+Labels:           app=mapreduce-pairs
+                  batch.kubernetes.io/controller-uid=850f87ca-fa2e-47b7-a354-2dfef4ae94d0
+                  batch.kubernetes.io/job-name=pairs-run-01-0002
+                  controller-uid=850f87ca-fa2e-47b7-a354-2dfef4ae94d0
+                  job-name=pairs-run-01-0002
+Annotations:      <none>
+Status:           Failed
+IP:               10.244.0.36
+IPs:
+  IP:           10.244.0.36
+Controlled By:  Job/pairs-run-01-0002
+Containers:
+  compute:
+    Container ID:  containerd://232727eb9ddd9dbd4ddd305f33f25f78f620177eb6c55cd8f7ad2870c0efcbc3
+    Image:         mapreduce-lab:k8s
+    Image ID:      docker.io/library/import-2026-11-26@sha256:00d3e957fe979b1df027eefe01d3281f628e23606a38527005a736cf30dd8343
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      python
+      -m
+      map_reduce.kubernetes_job
+    Args:
+      --output-prefix=kubernetes/memory/run-01-0002
+      --expected-sha256=a900fbbf01d5f64bdf3719261ecbdcccfafcf24002b48e8a29f14e9f709ec04c
+      --expected-rows=6100
+      --reference-sha256=d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099
+    State:          Terminated
+      Reason:       OOMKilled
+      Exit Code:    137
+      Started:      Thu, 26 Nov 2026 18:14:07 +0300
+      Finished:     Thu, 26 Nov 2026 18:14:08 +0300
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  44Mi
+    Requests:
+      cpu:     250m
+      memory:  32Mi
+    Environment:
+      IMAGE_TAG:      mapreduce-lab:k8s
+      S3_ENDPOINT:    http://host.docker.internal:9010
+      S3_BUCKET:      hh-lake
+      S3_OBJECT_KEY:  variant=3/java_vacancies.csv
+      S3_ACCESS_KEY:  <set to the key 'S3_ACCESS_KEY' in secret 'rustfs-external'>  Optional: false
+      S3_SECRET_KEY:  <set to the key 'S3_SECRET_KEY' in secret 'rustfs-external'>  Optional: false
+    Mounts:           <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  4s    default-scheduler  Successfully assigned de-k8s-lab/pairs-run-01-0002-6pq7r to de-k8s-lab-control-plane
+  Normal  Pulled     3s    kubelet            spec.containers{compute}: Container image "mapreduce-lab:k8s" already present on machine and can be accessed by the pod
+  Normal  Created    3s    kubelet            spec.containers{compute}: Container created
+  Normal  Started    3s    kubelet            spec.containers{compute}: Container started
