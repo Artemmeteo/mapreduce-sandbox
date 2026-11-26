@@ -27,6 +27,8 @@ def parser() -> argparse.ArgumentParser:
             count.add_argument("--workers", type=int, default=2)
             count.add_argument("--retries", type=int, default=2)
             count.add_argument("--failure-chunk", type=int)
+            count.add_argument("--execution", choices=("process-pool", "inline"),
+                               default="process-pool")
     verify = commands.add_parser("verify")
     verify.add_argument("left", type=Path, nargs="?", default=RESULTS / "mapreduce")
     verify.add_argument("right", type=Path, nargs="?", default=RESULTS / "duckdb")
@@ -61,7 +63,7 @@ def dispatch(args: argparse.Namespace):
             sizes=sizes,
             **{
                 key: getattr(args, key)
-                for key in ("mode", "chunk_size", "workers", "retries", "failure_chunk")
+                for key in ("mode", "chunk_size", "workers", "retries", "failure_chunk", "execution")
                 if hasattr(args, key)
             },
         )

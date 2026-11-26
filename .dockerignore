@@ -1,0 +1,12 @@
+**
+!pyproject.toml
+!uv.lock
+!src/
+!src/map_reduce/
+!src/map_reduce/**/*.py
+!src/map_reduce/infrastructure/sql/
+!src/map_reduce/infrastructure/sql/*.sql
+**/__pycache__/
+**/*.pyc
+.git/
+.env*

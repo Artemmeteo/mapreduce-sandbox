@@ -43,6 +43,21 @@ def execute_mappers(rows, options: CountOptions):
     values = (row["key_skills"] for row in rows)
     chunks = iter(lambda: tuple(islice(values, options.chunk_size)), ())
     chunks = enumerate(chunks)
+    if options.execution == "inline":
+        for task_id, chunk in chunks:
+            for attempt in range(options.retries + 1):
+                try:
+                    output = map_chunk(chunk, options.sizes, options.mode == "optimized",
+                                       task_id, attempt, options.failure_chunk)
+                except Exception as error:
+                    if attempt == options.retries:
+                        raise RuntimeError(
+                            f"Mapper {task_id} failed after {attempt + 1} attempt(s)"
+                        ) from error
+                    continue
+                yield output, attempt, 1
+                break
+        return
     pending = {}
     exhausted = False
     max_inflight = 0
@@ -89,11 +104,13 @@ def execute_mappers(rows, options: CountOptions):
                 yield output, attempt, max_inflight
 
 
-def count_mapreduce(storage: S3Storage, output: Path, options: CountOptions) -> dict:
+def count_mapreduce(storage: S3Storage, output: Path, options: CountOptions, progress=None) -> dict:
     reduced = Counter()
     intermediate = []
     expected = Counter()
     rows = with_skills = retries = max_inflight = shuffle_items = tasks = 0
+    if progress:
+        progress("mapping-start", {"rows": rows})
     with storage.rows() as source:
         for result, attempt, inflight in execute_mappers(source, options):
             tasks += 1
@@ -107,6 +124,10 @@ def count_mapreduce(storage: S3Storage, output: Path, options: CountOptions) -> 
                 reduced.update(result.emitted)
             else:
                 intermediate.extend(result.emitted)
+            if progress:
+                progress("mapping", {"rows": rows, "tasks": tasks})
+    if progress:
+        progress("reduce-write", {"rows": rows, "tasks": tasks})
     if options.mode == "baseline":
         intermediate.sort()
         for key, occurrences in groupby(intermediate):
@@ -149,6 +170,7 @@ def count_mapreduce(storage: S3Storage, output: Path, options: CountOptions) -> 
         "max_inflight": max_inflight,
         "retries": retries,
         "shuffle_items": shuffle_items,
+        "execution": options.execution,
     }
     write_json(output / "run.json", result)
     return result

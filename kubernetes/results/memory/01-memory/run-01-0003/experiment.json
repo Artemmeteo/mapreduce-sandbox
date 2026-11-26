@@ -1,0 +1,120 @@
+{
+  "method": "cgroup v2 memory.peak",
+  "input_sha256": "a900fbbf01d5f64bdf3719261ecbdcccfafcf24002b48e8a29f14e9f709ec04c",
+  "reference_sha256": "d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099",
+  "baseline_peak_bytes": 50319360,
+  "baseline_peak_mib": 47.98828125,
+  "formula": "ceil(peak_bytes * 1.25 / (16 * 1048576)) * 16 MiB",
+  "working_limit_mib": 64,
+  "working_peak_bytes": 65413120,
+  "working_peak_mib": 62.3828125,
+  "oom_killed_confirmed": true,
+  "working_limit_verified": true,
+  "attempts": [
+    {
+      "run_id": "run-01-0001",
+      "requests": {
+        "cpu": "250m",
+        "memory": "32Mi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "512Mi"
+      },
+      "program": {
+        "sizes": [
+          2
+        ],
+        "mode": "optimized",
+        "chunk_size": 250,
+        "workers": 1,
+        "execution": "inline"
+      },
+      "pod_phase": "Succeeded",
+      "terminated": {
+        "containerID": "containerd://82a1e8b35dc2121395716d4e869f2a61a6032ca4b3e73949ddb23ce8f67ecda2",
+        "exitCode": 0,
+        "finishedAt": "2026-11-26T15:14:03Z",
+        "reason": "Completed",
+        "startedAt": "2026-11-26T15:14:01Z"
+      },
+      "container_elapsed_seconds": 2.0,
+      "application_elapsed_seconds": 1.0791743760000827,
+      "completed_peak_bytes": 50319360,
+      "last_reported_peak_bytes": 50319360,
+      "last_logged_stage": "complete",
+      "counts_sha256": "d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099",
+      "matches_reference": true
+    },
+    {
+      "run_id": "run-01-0002",
+      "requests": {
+        "cpu": "250m",
+        "memory": "32Mi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "44Mi"
+      },
+      "program": {
+        "sizes": [
+          2
+        ],
+        "mode": "optimized",
+        "chunk_size": 250,
+        "workers": 1,
+        "execution": "inline"
+      },
+      "pod_phase": "Failed",
+      "terminated": {
+        "containerID": "containerd://232727eb9ddd9dbd4ddd305f33f25f78f620177eb6c55cd8f7ad2870c0efcbc3",
+        "exitCode": 137,
+        "finishedAt": "2026-11-26T15:14:08Z",
+        "reason": "OOMKilled",
+        "startedAt": "2026-11-26T15:14:07Z"
+      },
+      "container_elapsed_seconds": 1.0,
+      "application_elapsed_seconds": null,
+      "completed_peak_bytes": null,
+      "last_reported_peak_bytes": 46526464,
+      "last_logged_stage": "mapping-start",
+      "counts_sha256": null,
+      "matches_reference": null
+    },
+    {
+      "run_id": "run-01-0003",
+      "requests": {
+        "cpu": "250m",
+        "memory": "32Mi"
+      },
+      "limits": {
+        "cpu": "1",
+        "memory": "64Mi"
+      },
+      "program": {
+        "sizes": [
+          2
+        ],
+        "mode": "optimized",
+        "chunk_size": 250,
+        "workers": 1,
+        "execution": "inline"
+      },
+      "pod_phase": "Succeeded",
+      "terminated": {
+        "containerID": "containerd://7ccb41fc7dddb8121b4db4eb8d640ac54e47f5adc3922d50019ec950c4be8d80",
+        "exitCode": 0,
+        "finishedAt": "2026-11-26T15:14:12Z",
+        "reason": "Completed",
+        "startedAt": "2026-11-26T15:14:10Z"
+      },
+      "container_elapsed_seconds": 2.0,
+      "application_elapsed_seconds": 1.2392560009993758,
+      "completed_peak_bytes": 65413120,
+      "last_reported_peak_bytes": 65413120,
+      "last_logged_stage": "complete",
+      "counts_sha256": "d7d1fe7957af05402286a3da82984ef57d97ef55cfef3e982729722000069099",
+      "matches_reference": true
+    }
+  ]
+}

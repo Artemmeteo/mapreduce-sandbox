@@ -41,6 +41,8 @@ def load_settings() -> S3Settings:
         endpoint=values.get("S3_ENDPOINT", "http://127.0.0.1:9010"),
         access_key=values["S3_ACCESS_KEY"],
         secret_key=values["S3_SECRET_KEY"],
+        bucket=values.get("S3_BUCKET", "hh-lake"),
+        object_key=values.get("S3_OBJECT_KEY", "variant=3/java_vacancies.csv"),
     )
 
 
@@ -52,6 +54,7 @@ class CountOptions:
     workers: int = 2
     retries: int = 2
     failure_chunk: int | None = None
+    execution: str = "process-pool"
 
     def __post_init__(self):
         if not self.sizes or len(set(self.sizes)) != len(self.sizes):
@@ -64,3 +67,7 @@ class CountOptions:
             raise ValueError("Positive chunk size/workers and nonnegative retries required")
         if self.failure_chunk is not None and self.failure_chunk < 0:
             raise ValueError("Failure chunk must be nonnegative")
+        if self.execution not in ("process-pool", "inline"):
+            raise ValueError("Unknown mapper execution")
+        if self.execution == "inline" and self.workers != 1:
+            raise ValueError("Inline execution requires workers=1")
